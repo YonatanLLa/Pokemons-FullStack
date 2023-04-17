@@ -2,10 +2,11 @@ const {
   createPokeDex,
   searchPoke,
   getAllPokes,
-  getPokemos,
+  // getPokemos,
   clearPokes,
   updatePokes,
 } = require("../controllers/pokeControllers");
+const pokeId = require("../controllers/pokeId")
 // const {Pokemon} = require('../db')
 
 const creatPokeHandler = async (req, res) => {
@@ -32,8 +33,8 @@ const creatPokeHandler = async (req, res) => {
 const getPokeHandler = async (req, res) => {
   try {
     const { name } = req.query;
-    console.log(name);
     const results = name ? await searchPoke(name) : await getAllPokes();
+    console.log(results);
     res.status(200).json(results);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -44,7 +45,7 @@ const getPokeById = async (req, res) => {
   try {
     const { id } = req.params;
     const sourse = isNaN(id) ? "BDD" : "API";
-    const poke = await getPokemos(id, sourse);
+    const poke = await pokeId(id, sourse);
     res.status(200).json(poke);
   } catch (error) {
     res.status(404).json({ error: error.message });

@@ -5,9 +5,7 @@ import { useSelector } from 'react-redux'
 
 
 // Renderiza un componete card
-const Cards = (props) => {
-  console.log(props.currentPokemons);
-  // console.log(currentPokemons);
+const Cards = () => {
  const pokemons = useSelector(state => state.pokemons)
   return (
     // redeniza un componente
@@ -15,7 +13,7 @@ const Cards = (props) => {
       {pokemons.map(
         ({id, name, image, Types, attack}) => {
           return (
-            <div className={styles.cardsChildren}>
+            <>
               <Card
                 id={id}
                 name={name}
@@ -23,7 +21,7 @@ const Cards = (props) => {
                 type={Types}
                 attack={attack}
               />
-            </div>
+            </>
           );
         }
       )}

@@ -4,11 +4,14 @@
     border-radius: 1em;
     background-color: rgba(0, 0, 0, 0.71);
     /* padding: 10px; */
-    width: fit-content;
-    height: fit-content; 
+    /* width: fit-content; */
+    /* height: fit-content;  */
     animation: fedein 1s;
     transition: transform 0.3s;
     transform: scale(0.8);
+    margin: 0;
+    padding: 0;
+    
        /* width: fit-content; */
 }
 .cardContainer:hover{

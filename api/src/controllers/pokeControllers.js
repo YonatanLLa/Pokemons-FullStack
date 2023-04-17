@@ -4,10 +4,9 @@ const axios = require("axios");
 const pokeApi = "https://pokeapi.co/api/v2/pokemon";
 const urlType = "https://pokeapi.co/api/v2/type";
 
-// const pokeApi = "https://pokeapi.co/api/v2/pokemon";
 
 const getPokemons = async () => {
-  const response = await axios.get(`${pokeApi}?limit=15`);
+  const response = await axios.get(`${pokeApi}?limit=11`);
 
   const promises = response.data.results.map((pokemon) => {
     return axios
@@ -80,7 +79,7 @@ const getAllPokes = async () => {
 // controller sobre buscar name
 const searchApi = async (name) => {
   const respose = await axios.get(`${pokeApi}/${name}`);
-  const { sprites, types, weight, stats, height } = respose.data;
+  const { sprites,id, types, weight, stats, height } = respose.data;
   return {
     id,
     name,
@@ -96,38 +95,23 @@ const searchApi = async (name) => {
   };
 };
 const searchPoke = async (name) => {
+  console.log(name);
   const datasearch = await Pokemon.findOne({
     where: {
-      name,
+      name: name,
     },
   });
-  return datasearch ? datasearch : await searchApi(name);
+  console.log(datasearch);
+  if (datasearch) {
+    return datasearch.toJSON(); // Asegurarse de que el resultado sea un objeto JSON
+  } else {
+    const nameApi = await searchApi(name);
+    return nameApi;
+  }  // return datasearch ? await datasearch : datoName;
 };
 
 // Logica para el id
-const pokeId = async (id) => {
-  const response = await axios(`${pokeApi}/${id}`);
-  return {
-    id: response.data.id,
-    name: response.data.name,
-    image: response.data.sprites.other.home.front_default,
-    Types: response.data.types.map((t) => t.type.name),
-    hp: response.data.stats[0].base_stat,
-    attack: response.data.stats[1].base_stat,
-    defense: response.data.stats[2].base_stat,
-    speed: response.data.stats[5].base_stat,
-    weight: response.data.weight,
-    height: response.data.height,
-    created: false,
-  };
-};
-// me falta que me busque al servidor
-const getPokemos = async (id, sourse) => {
-  if (sourse === "API") {
-    return await pokeId(id);
-  }
-  return await Pokemon.findByPk(id);
-};
+
 // sourse === "API" ? await pokeId(id) : await Pokemon.findByPk(id);
 
 // Revisar no funciona revisar
@@ -167,7 +151,7 @@ module.exports = {
   createPokeDex,
   getAllPokes,
   searchPoke,
-  getPokemos,
+  // getPokemos,
   clearPokes,
   updatePokes,
   getTypesApi,

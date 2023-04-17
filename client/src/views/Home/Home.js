@@ -10,13 +10,11 @@ import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getPokemons());
   }, [dispatch]);
   return (
     <div className={styles.homeContainer}>
-      <div className={styles.homeNav}> </div>
       <div className={styles.homeFilter}>
         <Filter />
       </div>

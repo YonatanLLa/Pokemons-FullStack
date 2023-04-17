@@ -1,9 +1,16 @@
 import React from "react";
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
+import Seeker from "../Seeker/Seeker";
 const NavBar = () => {
   return (
-    <nav className={styles.navContainer}>
+    <div>
+      <nav className={styles.navContainer}>
+        <ul>
+          <li>
+            <Seeker/>
+          </li>
+        </ul>
       <ul>
         <li>
           <Link to="/home">Home</Link>
@@ -19,7 +26,9 @@ const NavBar = () => {
           <Link to="/">Regresar</Link>
         </li>
       </ul>
-    </nav>
+      </nav>
+     
+    </div>
   );
 };
 

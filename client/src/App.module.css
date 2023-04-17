@@ -1,10 +1,11 @@
-.appContainer{
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    height: 105vh; */
-    
-    padding: 0em 2em 0em 2em;
+.appContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    /* grid-column-gap: 20px; */
+    grid-row-gap: 20px;
+    height: 100vh;
+    padding: 0em 2rem 0  2rem;
+    /* padding: 1rem; */
+    overflow: hidden;
 }

@@ -1,4 +1,4 @@
-import { GET_POKEMONS, ORDER_POKE_AZ_ZA, ORDER_ATTACK, SET_IMAGE } from "./type";
+import { GET_POKEMONS, ORDER_POKE_AZ_ZA, ORDER_ATTACK, SET_IMAGE,SET_INPUT } from "./type";
 
 const initialState = {
   pokemons: [],
@@ -16,6 +16,7 @@ const reactReducer = (state = initialState, action) => {
         pokemons: action.payload,
         filterPokemons: action.payload,
         filterAttack: action.payload,
+        filterImg: action.payload,
       };
     case ORDER_POKE_AZ_ZA:
       return {
@@ -38,9 +39,12 @@ const reactReducer = (state = initialState, action) => {
         pokemons: [...state.filterAttack].sort((a, b) => {
           if (action.payload === "Asendente") {
             if (a.attack < b.attack) return -1;
+            if(a.attack > b.attack) return 1
             return 0;
           } else {
+            if(a.attack < b.attack) return 1
             if(a.attack > b.attack) return -1
+            return 0;
           }
         }),
       };
@@ -48,6 +52,12 @@ const reactReducer = (state = initialState, action) => {
       return{
         ...state,
         filterImg: action.payload
+      }
+      case SET_INPUT: {
+        return {
+          ...state,
+          pokemons: state.filterImg.filter(poke => poke.name === action.payload)
+        }
       }
     default:
       return { ...state };
