@@ -1,0 +1,14 @@
+.cardsContainer{
+    border-radius:1rem ;
+    background-color: rgb(34, 34, 34);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, minmax(0, max-content)); /* ajusta esta propiedad */
+    grid-column-gap: 0px;
+    grid-row-gap: 1px;
+    align-content: end;
+    overflow: auto; /* agrega esta propiedad si quieres que el contenido se desborde en lugar de recortarse */
+  }
+.cardsChildren{
+    width: fit-content;
+}

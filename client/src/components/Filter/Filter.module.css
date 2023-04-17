@@ -1,0 +1,19 @@
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: blanchedalmond;
+    
+}
+select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+  }
+
+  option:checked {
+    background-color: #eee;
+    font-weight: bold;
+  }

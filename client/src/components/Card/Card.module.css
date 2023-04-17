@@ -1,0 +1,60 @@
+.cardContainer{
+    
+    border: 2px solid black;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.71);
+    /* padding: 10px; */
+    width: fit-content;
+    height: fit-content; 
+    animation: fedein 1s;
+    transition: transform 0.3s;
+    transform: scale(0.8);
+       /* width: fit-content; */
+}
+.cardContainer:hover{
+    transform: scale(1) translateY(-10px) translateY(10px);
+}
+@keyframes fedein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.cardImg{
+    width: 150px;
+    /* height: 100px; */
+}
+.cardTitle, .cardId{
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.cardType{
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+.cardDetails{
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cardContainer:hover .cardDetails{
+    opacity: 1;
+}
+.cardDetails{
+    position: absolute;
+    /* top: -100%; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* left: 0; */
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: #ffffff83;
+    /* padding: 10px; */
+    transition: top 0.3s ease-in-out;
+}
+.cardContainer:hover .cardDetails{
+    bottom: 0;
+    
+}

@@ -1,0 +1,43 @@
+import React, { useEffect, useRef } from "react";
+import video from "../../../assets/videos/Batalla.mp4";
+import styles from "./LanVideo.module.css";
+
+const LanVideo = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Establece el tiempo de inicio del segmento en 30 segundos después de que se cargue el video
+      videoRef.current.currentTime = 60 // establece el tiempo actual en 60 segundos (1 minuto)
+      videoRef.current.startTime = 60 // establece el tiempo de inicio en 60 segundos (1 minuto)
+      videoRef.current.endTime = 120 // establece el tiempo de finalización en 120 segundos (2 minutos)
+      // videoRef.current.play()
+      videoRef.current.playbackRate = 1;
+      videoRef.current.play();
+    }
+  }, []);
+
+  return (
+    <div className={styles.wrapper}>
+      <video src={video} ref={videoRef} autoPlay loop muted playsInline>
+        <source src={video} type="video/mp4" />
+      </video>
+    </div>
+    // <div>
+    //   <iframe
+    //     width="560"
+    //     height="315"
+    //     src="https://www.youtube.com/embed/kRnIKiZpDz4"
+    //     title="YouTube video player"
+    //     frameborder="0"
+    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    //     allowfullscreen
+    //   ></iframe>
+    //   <div className={styles.centrado}>
+    //     <div className={styles.background}></div>
+    //   </div>
+    // </div>
+  );
+};
+
+export default LanVideo;
