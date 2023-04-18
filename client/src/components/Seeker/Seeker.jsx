@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { seekerPokemons } from "../../redux/action";
-// import { useSelector } from 'react-redux'
+import { seekerPokemons, seekerPokemonsId,getPokemons } from "../../redux/action";
+// import { useSelector } from "react-redux";
+
 
 const Seeker = () => {
-  const [input, setInput] = useState("");
-  const dispstch = useDispatch();
+  // const pokemons = useSelector(state => state.pokemons)
+  const [input, setInput] = useState({
+    text: "",
+    id: null,
+  });
+  const dispatch = useDispatch();
 
   const handleInput = (event) => {
     const value = event.target.value;
-    setInput(value);
-    console.log(value);
+    setInput({
+      ...input,
+      text: value,
+    });
   };
+
+  if (input.text === "") {
+    dispatch(getPokemons())
+  }
   const handleClick = () => {
-    dispstch(seekerPokemons(input));
+
+    if (input.id !== null) {
+      dispatch(seekerPokemonsId(input.id));
+    } else if(typeof input.text === "string") {
+      dispatch(seekerPokemons(input.text));
+    }
   };
 
   return (
     <div>
       <div>
-        <input onChange={handleInput} type="text" value={input} />
+        <input onChange={handleInput} type="text" value={input.text} />
         <button onClick={handleClick}>Search</button>
       </div>
     </div>

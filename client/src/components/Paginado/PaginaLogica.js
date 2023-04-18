@@ -1,14 +1,14 @@
-import React from 'react'
+// import React from 'react'
 
-const PaginaLogica = ({pokePage, pokemons, pokePaginado}) => {
-    const pageNumbers = []
-    for()
+// const PaginaLogica = ({pokePage, pokemons, pokePaginado}) => {
+//     const pageNumbers = []
+//     for()
 
-    return (
-    <div>
+//     return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default PaginaLogica
+// export default PaginaLogica

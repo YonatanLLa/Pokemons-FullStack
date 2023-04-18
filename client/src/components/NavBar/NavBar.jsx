@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Seeker from "../Seeker/Seeker";
 const NavBar = () => {
   return (
-    <div>
+    <div className={styles.divContainer}>
       <nav className={styles.navContainer}>
         <ul>
           <li>

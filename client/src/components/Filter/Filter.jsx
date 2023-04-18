@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import {searchTypes} from "../../redux/action"
 import { useState } from "react";
 import {searchAttack} from "../../redux/action"
-import Carrusel from "../Carrusel/Carrusel";
 
 const Filter = () => {
   const dispatch = useDispatch()
@@ -25,20 +24,19 @@ const Filter = () => {
   return (
     <div className={styles.filterContainer}>
 
-      <Carrusel/>
-      <div>
-        <label htmlFor="sortOrder">Filtrador Por: </label>
-        <select name="sortOrder" value={order} onChange={handleSortOrder} id="">
+      <di className={styles.buttonContainerFilter}>
+        <label htmlFor="sortOrder">Filtrador: </label>
+        <select name="sortOrder" className={styles.selectFilter} value={order} onChange={handleSortOrder} id="">
           <option value="Asendente">A-Z</option>
           <option value="Desendente">Z-A</option>
         </select>
-      </div>
+      </di>
       
       <div>
         <label htmlFor="">Filtrado Por: </label>
         <select name="" id="" value={attack} onChange={handleAttack}>
-          <option value="Asendente">Menor Attack</option>
-          <option value="Desendente">Mayor Attack</option>
+          <option value="Asendente">Attack - </option>
+          <option value="Desendente">Attack + </option>
         </select>
       </div>
 

@@ -1,10 +1,18 @@
-import { GET_POKEMONS, ORDER_POKE_AZ_ZA, ORDER_ATTACK, SET_IMAGE,SET_INPUT } from "./type";
+import {
+  GET_POKEMONS,
+  ORDER_POKE_AZ_ZA,
+  ORDER_ATTACK,
+  SET_IMAGE,
+  SET_INPUT,
+  SET_ID,
+} from "./type";
 
 const initialState = {
   pokemons: [],
   filterPokemons: [],
   filterAttack: [],
-  filterImg: []
+  filterImg: [],
+  filterId: null,
 };
 
 const reactReducer = (state = initialState, action) => {
@@ -17,6 +25,7 @@ const reactReducer = (state = initialState, action) => {
         filterPokemons: action.payload,
         filterAttack: action.payload,
         filterImg: action.payload,
+        filterId: action.payload
       };
     case ORDER_POKE_AZ_ZA:
       return {
@@ -39,26 +48,39 @@ const reactReducer = (state = initialState, action) => {
         pokemons: [...state.filterAttack].sort((a, b) => {
           if (action.payload === "Asendente") {
             if (a.attack < b.attack) return -1;
-            if(a.attack > b.attack) return 1
+            if (a.attack > b.attack) return 1;
             return 0;
           } else {
-            if(a.attack < b.attack) return 1
-            if(a.attack > b.attack) return -1
+            if (a.attack < b.attack) return 1;
+            if (a.attack > b.attack) return -1;
             return 0;
           }
         }),
       };
     case SET_IMAGE:
+      return {
+        ...state,
+        filterImg: action.payload,
+      };
+    case SET_INPUT: {
+      return {
+        ...state,
+        pokemons: state.filterImg.filter(
+          (poke) => poke.name === action.payload
+        ),
+      };
+    }
+    case SET_ID: {
       return{
         ...state,
-        filterImg: action.payload
-      }
-      case SET_INPUT: {
-        return {
-          ...state,
-          pokemons: state.filterImg.filter(poke => poke.name === action.payload)
+        pokemons: state.filterId.filter(poke => {
+          console.log(poke)
         }
+          // poke => poke.id === action.payload
+        )
       }
+    }
+
     default:
       return { ...state };
   }

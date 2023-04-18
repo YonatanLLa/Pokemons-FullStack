@@ -5,34 +5,37 @@ const pokeApi = "https://pokeapi.co/api/v2/pokemon";
 const urlType = "https://pokeapi.co/api/v2/type";
 
 
-const getPokemons = async () => {
-  const response = await axios.get(`${pokeApi}?limit=11`);
 
-  const promises = response.data.results.map((pokemon) => {
-    return axios
-      .get(pokemon.url)
-      .then((res) => res.data)
-      .then((data) => {
-        const { id, name, sprites, types, weight, stats, height } = data;
-        return {
-          id,
-          name,
-          image: sprites.other.home.front_default,
-          // imageDetail: sprites.other.home.front_default,
-          Types: types.map((t) => t.type.name),
-          hp: stats[0].base_stat,
-          attack: stats[1].base_stat,
-          defense: stats[2].base_stat,
-          speed: stats[5].base_stat,
-          weight,
-          height,
-          created: false,
-        };
-      })
-      .catch((error) => error);
-  });
+const getPokemons= async () => {
+  const api = await axios.get(pokeApi + `?limit=20`);
+  const pokeUrl = [];
+  api.data.results.map((r) => {
+    pokeUrl.push(axios.get(r.url).then((response) => response.data));
+  }); //pusheamos las properties de las url para poder manipularlas idividualmente
 
-  return Promise.all(promises);
+  const pokeProps = Promise.all(pokeUrl).then(
+    (
+      response //mapeamos las propiedades individuales
+    ) =>
+    response.map(p=>{
+      const { id, name, sprites, types, weight, stats, height } = p;
+      return {
+        id,
+        name,
+        image: sprites.other.home.front_default,
+        // imageDetail: sprites.other.home.front_default,
+        Types: types.map((t) => t.type.name),
+        hp: stats[0].base_stat,
+        attack: stats[1].base_stat,
+        defense: stats[2].base_stat,
+        speed: stats[5].base_stat,
+        weight,
+        height,
+        created: false,
+      };
+    }))
+     
+  return await pokeProps; //retornamos el objeto con sus propiedades
 };
 
 const createPokeDex = async (

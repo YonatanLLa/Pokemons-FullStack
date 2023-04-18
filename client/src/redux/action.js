@@ -46,6 +46,7 @@ export const getPokemonsImg = () => {
 };
 
 export const seekerPokemons = (name) => {
+  console.log(name);
   return async (dispatch) => {
     const apiPokemons = await axios(`http://localhost:3001/pokemons?name=${name}`);
     const pokemon = apiPokemons.data.name;

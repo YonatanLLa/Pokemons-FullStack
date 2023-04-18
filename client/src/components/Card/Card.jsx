@@ -3,11 +3,11 @@ import styles from './Card.module.css'
 import { Link } from 'react-router-dom'
 // mostrar los pokemons
 const Card = ({name,image,type, id, attack}) => {
+  console.log({name,image,type,id});
   //  muestra la info de los pokemones
   // - link para los detalles
   return (
     <div className={styles.cardContainer}>
-      {/* <h1 className={styles.cardId}>{id}</h1> */}
             <Link to={`/detail/${id}`}>
       <img className={styles.cardImg} src={image} alt="" />
       </Link>
@@ -23,7 +23,6 @@ const Card = ({name,image,type, id, attack}) => {
         })
       }
       </div>
-      {/* <h1 style={{color: "red"}}>attack: {attack}</h1> */}
     </div>
   )
 }
