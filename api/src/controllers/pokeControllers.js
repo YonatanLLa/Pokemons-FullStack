@@ -98,13 +98,11 @@ const searchApi = async (name) => {
   };
 };
 const searchPoke = async (name) => {
-  console.log(name);
   const datasearch = await Pokemon.findOne({
     where: {
       name: name,
     },
   });
-  console.log(datasearch);
   if (datasearch) {
     return datasearch.toJSON(); // Asegurarse de que el resultado sea un objeto JSON
   } else {

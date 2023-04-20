@@ -4,32 +4,38 @@ import { Link } from "react-router-dom";
 import Seeker from "../Seeker/Seeker";
 const NavBar = () => {
   return (
-    <div className={styles.divContainer}>
+    
       <nav className={styles.navContainer}>
-        <ul>
-          <li>
-            <Seeker/>
-          </li>
-        </ul>
+    <div className={styles.childrenNav}>
       <ul>
         <li>
           <Link to="/home">Home</Link>
         </li>
       </ul>
+      
       <ul>
         <li>
           <Link to="/create">Form</Link>
         </li>
       </ul>
+
       <ul>
         <li>
           <Link to="/">Regresar</Link>
         </li>
       </ul>
-      </nav>
-     
     </div>
-  );
+    <div className={styles.inputNav}>
+        <ul>
+          <li>
+            <Seeker/>
+          </li>
+        </ul>
+      </div>
+    </nav>
+     
+
+     );
 };
 
 export default NavBar;

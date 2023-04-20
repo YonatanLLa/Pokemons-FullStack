@@ -9,7 +9,6 @@
     animation: fedein 1s;
     transition: transform 0.3s;
     transform: scale(0.8);
-    margin: 0;
     padding: 0;
     
        /* width: fit-content; */
@@ -22,7 +21,7 @@
     to {opacity: 1;}
 }
 .cardImg{
-    width: 150px;
+    width: 280px;
     /* height: 100px; */
 }
 .cardTitle, .cardId{

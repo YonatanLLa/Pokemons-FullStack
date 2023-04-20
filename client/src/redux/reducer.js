@@ -5,10 +5,13 @@ import {
   SET_IMAGE,
   SET_INPUT,
   SET_ID,
+  GET_TYPE,
+  ORDER_TYPE,
 } from "./type";
 
 const initialState = {
   pokemons: [],
+  types: [],
   filterPokemons: [],
   filterAttack: [],
   filterImg: [],
@@ -25,8 +28,14 @@ const reactReducer = (state = initialState, action) => {
         filterPokemons: action.payload,
         filterAttack: action.payload,
         filterImg: action.payload,
-        filterId: action.payload
+        filterId: action.payload,
       };
+    case GET_TYPE:{
+      return{
+        ...state,
+        types: action.payload
+      }
+    }
     case ORDER_POKE_AZ_ZA:
       return {
         ...state,
@@ -71,14 +80,26 @@ const reactReducer = (state = initialState, action) => {
       };
     }
     case SET_ID: {
-      return{
+      return {
         ...state,
-        pokemons: state.filterId.filter(poke => {
-          console.log(poke)
-        }
+        pokemons: state.filterId.filter(
+          (poke) => {
+            // console.log(poke)
+          }
           // poke => poke.id === action.payload
-        )
-      }
+        ),
+      };
+    }
+  
+    case ORDER_TYPE: {
+      const filterPokemons = state.filterPokemons
+      const typeFiltered = action.payload === "todos"
+                        ?filterPokemons
+                        :filterPokemons.filter(pokemon =>pokemon.Types.some(type => type === action.payload))
+      return {
+        ...state,
+        pokemons:typeFiltered 
+      };
     }
 
     default:

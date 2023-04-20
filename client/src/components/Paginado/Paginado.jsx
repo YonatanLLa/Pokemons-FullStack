@@ -30,7 +30,7 @@ const Paginado = () => {
   const handlePreviousPage = () => {
     setCurrentPage(currentPage => Math.max(currentPage - 1, 1));
   };
-
+  console.log(handlePreviousPage);
   const handleNextPage = () => {
     setCurrentPage(currentPage => Math.min(currentPage + 1, totalPages));
   };

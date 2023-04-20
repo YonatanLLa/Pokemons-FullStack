@@ -11,6 +11,7 @@ const pokeId = require("../controllers/pokeId")
 
 const creatPokeHandler = async (req, res) => {
   try {
+    console.log(req.body)
     const { name, hp, attack, defense, speed, height, weight, image, types } =
       req.body;
     const newPokes = await createPokeDex(
@@ -24,7 +25,7 @@ const creatPokeHandler = async (req, res) => {
       weight,
       image
     );
-    res.status(200).json(newPokes);
+    res.status(200).json("Creado exitoxamente");
   } catch (error) {
     res.status(400).json(error.message);
   }
@@ -34,7 +35,6 @@ const getPokeHandler = async (req, res) => {
   try {
     const { name } = req.query;
     const results = name ? await searchPoke(name) : await getAllPokes();
-    console.log(results);
     res.status(200).json(results);
   } catch (error) {
     res.status(500).json({ error: error.message });

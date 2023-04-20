@@ -1,13 +1,36 @@
-.divContainer{
-    border: 2px solid rgb(19, 18, 18);
-    padding-top:1rem ;
-} 
- 
- .navContainer{
-    display: flex;
-    justify-content: space-around;
-    border: 2px solid red;
-    border-radius: 10px;
 
+ 
+.navContainer{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* border: 2px solid red; */
+    background-color: #181f2689;
+    /* border-radius: 10px; */
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    display: grid;
+    transition: height .3s ease-in-out;
+    grid-template-columns: 8fr repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    /* margin-top: 1px;  */
     /* padding-top: 1rem; */
-} 
+}
+.inputNav { grid-area: 1 / 1 / 2 / 2; }
+
+.childrenNav{ 
+    grid-area: 1 / 2 / 2 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+    /* flex-direction: none; */
+}
+li{
+    list-style: none;
+
+}

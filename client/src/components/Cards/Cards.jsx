@@ -6,7 +6,6 @@ import styles from "./Cards.module.css"
 
 // Renderiza un componete card
 const Cards = ({pokemons}) => {
-  console.log(pokemons);
 //  const pokemons = useSelector(state => state.pokemons)
   return (
     // redeniza un componente

@@ -27,24 +27,28 @@ const Detail = () => {
   const { name,hp, attack, defense, speed, weight, height,image } = obj
         // pokemons.find((poke) => `${poke.id}` === `${id}`);
   return (
-    <>
-    <div className={styles.containerDetail}>
-      <div className={styles.descriptionDetail}>
-        <h3>Name: {name}</h3>
-        <h3>Hp: {hp}</h3>
-        <h3>Attack: {attack}</h3>
-        <h3>Defense: {defense}</h3>
-        <h3>Speed: {speed}</h3>
-        <h3>Weight: {weight}</h3>
-        <h3>Height: {height}</h3>
-      </div>
 
-      <Link to="/home">
-      <button>Regresar</button>
-      </Link>
+    <div className={styles.contDetail}>
+      <div className={styles.containerDetail}>
+        <div className={styles.descriptionDetail}>
+          <h3>Name: {name}</h3>
+          <h3>Hp: {hp}</h3>
+          <h3>Attack: {attack}</h3>
+          <h3>Defense: {defense}</h3>
+          <h3>Speed: {speed}</h3>
+          <h3>Weight: {weight}</h3>
+          <h3>Height: {height}</h3>
+        </div>
+
+        <Link to="/home">
+        <button>Regresar</button>
+        </Link>
+      </div>
+      <div>
+
+        <img src={image} alt="" className={styles.imageDetail} />
+      </div>
     </div>
-      <img src={image} alt="" className={styles.imageDetail} />
-    </>
   )
 }
 
