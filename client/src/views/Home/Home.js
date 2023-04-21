@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 // import Cards from "../../components/Cards/Cards";
 // import Card from '../../components/Card/Card'
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { getTypes } from "../../redux/action";
+// import { useDispatch } from "react-redux";
+// import { useEffect } from "react";
 import Filter from "../../components/Filter/Filter";
 import styles from "./Home.module.css";
-import Paginado from "../../components/Paginado/Paginado";
+// import Paginado from "../../components/Paginado/Paginado";
 // import Footer from "../../components/Footer/Footer";
 import Silebar from "../../components/About/Silebar";
+import Cards from "../../components/Cards/Cards";
+// import {getPokemons} from "../../redux/action"
 const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getTypes());
-  }, [dispatch]);
+  // const dispatch = useDispatch();
   
+
+  // const dispatch = useDispatch()
+  // console.log(pokemons);
+  // useEffect(() => {
+  // }, [dispatch]);
   return (
     <div className={styles.homeContainer}>
       {/* <div className={styles.cursorHome}>
@@ -25,12 +28,12 @@ const Home = () => {
       </div>
       <div className={styles.homeCardsD2}>
         {/* <Cards /> */}
-        <Paginado/>
+        <Cards/>
       </div>
       <div className={styles.homeFilterD3}>
         <Filter />
       </div>
-  
+    
     </div>
   );
 };

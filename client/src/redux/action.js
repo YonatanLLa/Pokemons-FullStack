@@ -7,7 +7,9 @@ import {
   SET_INPUT,
   SET_ID,
   GET_TYPE,
-  ORDER_TYPE
+  ORDER_TYPE,
+  REFRESH,
+
 } from "./type";
 
 export const getPokemons = () => {
@@ -45,15 +47,20 @@ export const getPokemonsImg = () => {
   };
 };
 
+// !busqueda por name
+
 export const seekerPokemons = (name) => {
   return async (dispatch) => {
-    const apiPokemons = await axios(`http://localhost:3001/pokemons?name=${name}`);
+    const apiPokemons = name? await axios(`http://localhost:3001/pokemons?name=${name}`)
+    : await axios(`http://localhost:3001/pokemons`);
     dispatch({
       type: SET_INPUT,
       payload: apiPokemons.data.name
     })
   };
 };
+
+// !Mi componente get por ID
 
 export const seekerPokemonsId = (id) => {
   return async(dispatch) => {
@@ -65,20 +72,30 @@ export const seekerPokemonsId = (id) => {
   }
 }
 
+// !Mi getypes por Types
+
 export const getTypes = () => {
   return async(dispatch) => {
     const apiPokemons = await axios(`http://localhost:3001/types`)
-    // console.log(apiPokemons.data);
     dispatch({
       type: GET_TYPE,
       payload: apiPokemons.data
     })
   }
 }
+
+
+
 export const setTypes = (types) => {
   // console.log(types);
   return {
     type: ORDER_TYPE,
     payload: types
+  }
+}
+export const setRefresh = (status) => {
+  return{
+    type: REFRESH,
+    payload: status
   }
 }

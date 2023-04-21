@@ -6,5 +6,6 @@ export const SET_INPUT = "SET_INPUT"
 export const SET_ID = "SET_ID"
 export const GET_TYPE = "GET_TYPE"
 export const ORDER_TYPE = "ORDER_TYPE"
+export const REFRESH = "REFRESH"
 
 // export const CARRUSEL = "CARRUSEL"

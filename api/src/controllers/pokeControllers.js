@@ -7,7 +7,7 @@ const urlType = "https://pokeapi.co/api/v2/type";
 
 
 const getPokemons= async () => {
-  const api = await axios.get(pokeApi + `?limit=20`);
+  const api = await axios.get(pokeApi + `?limit=10`);
   const pokeUrl = [];
   api.data.results.map((r) => {
     pokeUrl.push(axios.get(r.url).then((response) => response.data));

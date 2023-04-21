@@ -7,6 +7,7 @@ import {
   SET_ID,
   GET_TYPE,
   ORDER_TYPE,
+  REFRESH
 } from "./type";
 
 const initialState = {
@@ -95,11 +96,18 @@ const reactReducer = (state = initialState, action) => {
       const filterPokemons = state.filterPokemons
       const typeFiltered = action.payload === "todos"
                         ?filterPokemons
-                        :filterPokemons.filter(pokemon =>pokemon.Types.some(type => type === action.payload))
+                        :filterPokemons.filter(pokemon =>pokemon.Types && pokemon.Types.some(type => type === action.payload))
+        
       return {
         ...state,
-        pokemons:typeFiltered 
+        pokemons:typeFiltered
       };
+    }
+    case REFRESH:{
+      return{
+        ...state,
+        pokemons: action.payload
+      }
     }
 
     default:
