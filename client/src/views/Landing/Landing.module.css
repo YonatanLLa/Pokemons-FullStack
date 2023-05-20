@@ -13,13 +13,13 @@
 }
 .titleLanding{
     position: absolute;
-    top: -183px;
+    top: -130px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.95);
     width: 100%;
-    height: 100vh;
-    /* height: 100%; */
-    font-size: 272.5px;
+    /* height: 110vh; */
+    height: 104.71%;
+    font-size: 150px;
     text-align: center;
     font-weight: 700;
     mix-blend-mode: multiply;
@@ -42,3 +42,27 @@
     left: 0;
     right: 0;
 }
+.childrenLanding{
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    height: 439.5px;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    background: linear-gradient(180deg, rgba(199, 113, 21, 0.854), rgba(163, 138, 50, 0.589), rgba(228, 225, 225, 0.247));    
+}
+.childrenLanding img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     
+     
+}
+
+.subtitleLanding{
+    color: rgb(255, 255, 255);
+    padding: 1rem 0 0 3rem;    
+   }
