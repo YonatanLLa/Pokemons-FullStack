@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Farsan&display=swap');
+
 .containerLanding{
     /* position: relative; */
    
@@ -24,24 +26,41 @@
     font-weight: 700;
     mix-blend-mode: multiply;
 } 
+
+
 .buttonLanding{
+    font-family: 'Farsan', cursive;
+    color: rgba(33, 33, 33, 0.756);
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    font-size: 1.5rem;
     position: absolute;
+    border-radius: .5rem;
+    cursor: pointer;
+    /* border: none; */
+    background: linear-gradient(360deg, rgba(186, 203, 87, 0.797),rgba(255, 128, 0, 0.737));
     /* top: 0; */
     z-index: 300;
     left: 0;
     bottom: 0;
     width: 300px;
     height: 50px;
-    transform: translate(550px,-210px);  /* right: 0; */
+    transform: translate(180px,-50px);  /* right: 0; */
     
+}
+.buttonLanding:hover{
+    background: linear-gradient(360deg,rgba(255, 128, 0, 0.737), rgba(186, 203, 87, 0.719))
+
 }
 .buttonDivLanding{
     /* position: absolute; */
     z-index: 300;
-    top: 0;
     left: 0;
     right: 0;
 }
+
+
+
 .childrenLanding{
     position: absolute;
     bottom: 1rem;
@@ -51,7 +70,8 @@
     width: 80%;
     height: 439.5px;
     border-radius: 1rem;
-    border: 1px solid #fff;
+    font-size: 2rem;
+    border: 1px solid #ffffff;
     background: linear-gradient(180deg, rgba(199, 113, 21, 0.854), rgba(163, 138, 50, 0.589), rgba(228, 225, 225, 0.247));    
 }
 .childrenLanding img{
@@ -63,6 +83,8 @@
 }
 
 .subtitleLanding{
-    color: rgb(255, 255, 255);
-    padding: 1rem 0 0 3rem;    
+    font-family: 'Farsan', cursive;
+
+    color: rgba(33, 33, 33, 0.756);
+    padding: 0 0 0 3rem;    
    }

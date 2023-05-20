@@ -10,11 +10,17 @@
     /* background-color: red; */
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
+
     justify-content: center;
-    padding: 5em 1em;
+    padding: .5rem 1rem;
   }
 .cardsChildren{
   margin: 0;
   padding: 0;
   width: fit-content;
+}
+.cadsPaginado{
+  display: flex;
+
 }

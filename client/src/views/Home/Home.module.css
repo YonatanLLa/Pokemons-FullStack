@@ -1,9 +1,6 @@
 body{
     background-color: #151515f7;
-  background-position: center;
-  background-size: cover;
-  display: inline-flex;
-  padding-top: 70px;
+
   /* display: flex; */
     }
   
@@ -22,7 +19,8 @@ body{
     position: fixed;
 
 }
-.homeCardsD2 { grid-area: 1 / 2 / 2 / 3;
+.homeCardsD2 { 
+    grid-area: 1 / 2 / 2 / 3;
     scroll-behavior: smooth;
     padding-right: 1px;
 }
