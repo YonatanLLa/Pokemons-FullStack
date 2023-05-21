@@ -15,26 +15,28 @@ console.log(pageNumbers);
 
   return (
     <footer>
-      
-        {
-          
-          pageNumbers.length?(
-            <div className={styles.buttonPaginado}>
-              {    
-              pageNumbers && pageNumbers.map(page => (
-              <div>
-                  <button type="button" onClick={(event) => handleClick(page, event)}>{page}</button>
+      <div style={{display: "flex"}} >
+        <button> hola </button>        
+          {            
+            pageNumbers.length?(
+              <div className={styles.buttonPaginado}>
+                {    
+                pageNumbers && pageNumbers.map(page => (
+                <div>
+                    <button type="button" onClick={(event) => handleClick(page, event)}>{page}</button>
+                </div>
+              ))
+                }
+
               </div>
-            ))
-              }
 
-            </div>
-
-          ):<>
-            <NotFound />
-          </>
-          
-        }
+            ):<>
+              <NotFound />
+            </>
+            
+          }
+          <button>final</button>
+      </div>
     </footer>
   )
 }
