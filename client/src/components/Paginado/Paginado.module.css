@@ -1,5 +1,51 @@
-
-.buttonPaginado{
-    /* padding-top: 5rem; */
-    display: flex;
+.buttonPaginado {
+	/* padding-top: 5rem; */
+	display: flex;
 }
+.prev {
+	cursor: pointer;
+	border-radius: 0.2rem;
+	background: none;
+	/* background-color: #2c3e50; */
+	fill: #fff;
+}
+.prevNot {
+	visibility: hidden;
+    
+}
+.buttonPrev {
+	border: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+
+}
+.buttonPrev:hover{
+    background-color: #696969c8;
+    fill: #f39c12;
+    /* background: linear-gradient(30deg, #f39d128a 30%, #f1c40f91); */
+    /* : #2c3e50; */
+}
+.svgNextPrev {
+	width: 23px;
+	height: 34.3px;
+}
+.buttonCount {
+    font-size: 1.2rem;
+    background-color: #2c3e50;
+	border-radius: 0.2rem;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	width: 30px;
+	height: 40px;
+}
+.buttonCount:hover{
+    background-color: #696969c8;
+    color: #f39c12;
+}
+span:hover{
+    color: #f39c12;
+}
+.colorCurrente{
+    background-color: #696969c8;
+    color: #f39c12;}

@@ -7,7 +7,7 @@ import Filter from "../../components/Filter/Filter";
 import styles from "./Home.module.css";
 // import Paginado from "../../components/Paginado/Paginado";
 // import Footer from "../../components/Footer/Footer";
-import Silebar from "../../components/About/Silebar";
+import Silebar from "../../components/AboutRedes/Silebar";
 import Cards from "../../components/Cards/Cards";
 // import {getPokemons} from "../../redux/action"
 const Home = () => {

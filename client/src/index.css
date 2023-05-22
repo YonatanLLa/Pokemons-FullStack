@@ -59,6 +59,8 @@ html, body{
     background-image: url("./assets/types/water.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-water);
+
 
 }
 
@@ -67,6 +69,8 @@ html, body{
     background-image: url("./assets/types/grass.png");
     background-repeat: no-repeat;
     background-size:contain;
+    fill: var(--color-grass);
+
 }
 
 .poison {
@@ -74,6 +78,8 @@ html, body{
     background-image: url("./assets/types/poison.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-poison);
+
 }
 
 .fire {
@@ -81,6 +87,8 @@ html, body{
     background-image: url("./assets/types/fire.png");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-fire);
+
 }
 
 .bug {
@@ -88,6 +96,8 @@ html, body{
     background-image: url("./assets/types/bug.png");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-bug);
+
 }
 
 .dragon {
@@ -95,6 +105,8 @@ html, body{
     background-image: url("./assets/types/dragon.png");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-dragon);
+
 }
 
 .flying {
@@ -102,6 +114,8 @@ html, body{
     background-image: url("./assets/types/flying.png");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-flying);
+
 }
 
 .ground {
@@ -109,6 +123,8 @@ html, body{
     background-image: url("./assets/types/ground.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-ground);
+
 }
 
 .steel {
@@ -116,6 +132,8 @@ html, body{
     background-image: url("./assets/types/steel.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-steel);
+
 }
 
 .psychic {
@@ -123,6 +141,8 @@ html, body{
     background-image: url("./assets/types/psychic.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-psychic);
+
 }
 
 .ice {
@@ -130,6 +150,8 @@ html, body{
     background-image: url("./assets/types/ice.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-ice);
+
 }
 
 .ghost {
@@ -137,6 +159,8 @@ html, body{
     background-image: url("./assets/types/ghost.png");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-ghost);
+
 }
 
 .normal {
@@ -144,6 +168,8 @@ html, body{
     background-image: url("./assets/types/normal.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-normal);
+
 }
 
 .rock {
@@ -151,6 +177,8 @@ html, body{
     background-image: url("./assets/types/rock.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-rock);
+
 }
 
 .electric {
@@ -158,6 +186,8 @@ html, body{
     background-image: url("./assets/types/electric.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-electric);
+
 }
 
 .fighting {
@@ -165,6 +195,8 @@ html, body{
     background-image: url("./assets/types/fighting.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-fighting);
+
 }
 
 .fairy {
@@ -172,6 +204,8 @@ html, body{
     background-image: url("./assets/types/fairy.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-fairy);
+
 }
 
 .dark {
@@ -179,4 +213,6 @@ html, body{
     background-image: url("./assets/types/dark.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    fill: var(--color-dark);
+
 }
