@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const { Pokemon, Type } = require("../db");
 const axios = require("axios");
 
@@ -24,7 +25,7 @@ const getPokemons= async () => {
         name,
         image: sprites.other.home.front_default,
         // imageDetail: sprites.other.home.front_default,
-        Types: types.map((t) => t.type.name),
+        types: types.map((t) => t.type.name),
         hp: stats[0].base_stat,
         attack: stats[1].base_stat,
         defense: stats[2].base_stat,
@@ -53,7 +54,12 @@ const createPokeDex = async (
     where: { name },
     defaults: { name, hp,image, attack, speed, defense, height, weight,	created: false },
   });
-  pokemon.addTypes(types)
+
+  const pokeName = await Type.findAll({where: {
+    name: types
+  }})
+
+  pokemon.addTypes(pokeName)
   return created ? await pokemon : { message: "Pokemon already exists" };
 };
 // se devuel un pokemon encontrado
@@ -70,9 +76,10 @@ const getAllPokes = async () => {
       }
     },
   })
+
   const pokesWithTypes = databasePokes.map(poke => {
-    const Types = poke.Types.map(type => type.name);
-    return {...poke.toJSON(), Types};
+    const types = poke.types.map(type => type.name);
+    return {...poke.toJSON(), types};
 })
 
   const apiPokes = await getPokemons()

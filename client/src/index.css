@@ -29,7 +29,7 @@ html, body{
 
 :root {
 	--color-fire: #ff7402;
-	--color-grass: #9bcc50;
+	--color-grass: hsla(84, 55%, 56%, 0.92);
 	--color-steel: #9eb7b8;
 	--color-water: #4592c4;
 	--color-psychic: #f366b9;
@@ -48,9 +48,11 @@ html, body{
 	--color-fairy: #fdb9e9;
 	--color-shadow: #7b62a3;
 	--color-unknow: #757575;
+    /* --color-shadow: #000 */
 
 	--color-primary: #006d77;
 	--color-primary-hover: #83c5be;
+
 }
 
 /* Types de pokemons */
@@ -60,8 +62,9 @@ html, body{
     background-repeat: no-repeat;
     background-size: contain;
     fill: var(--color-water);
-
-
+    border: 1px solid var(--color-water);
+ 
+    
 }
 
 .grass {
@@ -71,7 +74,9 @@ html, body{
     background-size:contain;
     fill: var(--color-grass);
 
-}
+    border: 1px solid var(--color-grass);
+ 
+}   
 
 .poison {
 	background-color: var(--color-poison);
@@ -80,7 +85,9 @@ html, body{
     background-size: contain;
     fill: var(--color-poison);
 
-}
+    border: 1px solid var(--color-poison);
+ 
+}   
 
 .fire {
 	background-color: var(--color-fire);
@@ -89,7 +96,9 @@ html, body{
     background-size: contain;
     fill: var(--color-fire);
 
-}
+    border: 1px solid var(--color-fire);
+ 
+}   
 
 .bug {
 	background-color: var(--color-bug);
@@ -98,8 +107,10 @@ html, body{
     background-size: contain;
     fill: var(--color-bug);
 
-}
-
+    border: 1px solid var(--color-bug);
+ 
+    
+}   
 .dragon {
 	background: var(--color-dragon);
     background-image: url("./assets/types/dragon.png");
@@ -107,7 +118,9 @@ html, body{
     background-size: contain;
     fill: var(--color-dragon);
 
-}
+    border: 1px solid var(--color-dragon);
+ 
+}   
 
 .flying {
 	background-color: var(--color-flying);
@@ -116,7 +129,9 @@ html, body{
     background-size: contain;
     fill: var(--color-flying);
 
-}
+    border: 1px solid var(--color-flying);
+ 
+}   
 
 .ground {
 	background-color: var(--color-ground);
@@ -125,7 +140,9 @@ html, body{
     background-size: contain;
     fill: var(--color-ground);
 
-}
+    border: 1px solid var(--color-ground);
+ 
+}   
 
 .steel {
 	background-color: var(--color-steel);
@@ -134,7 +151,9 @@ html, body{
     background-size: contain;
     fill: var(--color-steel);
 
-}
+    border: 1px solid var(--color-steel);
+ 
+}   
 
 .psychic {
 	background-color: var(--color-psychic);
@@ -142,8 +161,9 @@ html, body{
     background-repeat: no-repeat;
     background-size: contain;
     fill: var(--color-psychic);
-
-}
+    border: 1px solid var(--color-psychic);
+ 
+}   
 
 .ice {
 	background-color: var(--color-ice);
@@ -152,7 +172,9 @@ html, body{
     background-size: contain;
     fill: var(--color-ice);
 
-}
+    border: 1px solid var(--color-ice);
+ 
+}   
 
 .ghost {
 	background-color: var(--color-ghost);
@@ -161,7 +183,9 @@ html, body{
     background-size: contain;
     fill: var(--color-ghost);
 
-}
+    border: 1px solid var(--color-ghost);
+ 
+}   
 
 .normal {
 	background-color: var(--color-normal);
@@ -170,7 +194,9 @@ html, body{
     background-size: contain;
     fill: var(--color-normal);
 
-}
+    border: 1px solid var(--color-normal);
+ 
+}   
 
 .rock {
 	background-color: var(--color-rock);
@@ -179,7 +205,9 @@ html, body{
     background-size: contain;
     fill: var(--color-rock);
 
-}
+    border: 1px solid var(--color-rock);
+ 
+}   
 
 .electric {
 	background-color: var(--color-electric);
@@ -188,7 +216,9 @@ html, body{
     background-size: contain;
     fill: var(--color-electric);
 
-}
+    border: 1px solid var(--color-electric);
+ 
+}   
 
 .fighting {
 	background-color: var(--color-fighting);
@@ -197,7 +227,9 @@ html, body{
     background-size: contain;
     fill: var(--color-fighting);
 
-}
+    border: 1px solid var(--color-fighting);
+ 
+}   
 
 .fairy {
 	background-color: var(--color-fairy);
@@ -206,7 +238,9 @@ html, body{
     background-size: contain;
     fill: var(--color-fairy);
 
-}
+    border: 1px solid var(--color-fairy);
+ 
+}   
 
 .dark {
 	background-color: var(--color-dark);
@@ -215,4 +249,24 @@ html, body{
     background-size: contain;
     fill: var(--color-dark);
 
+    border: 1px solid var(--color-dark);
+ 
+}   
+.shadow{
+    background-color: var(--color-shadow);
+    background-image: url("./assets/types/shadow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    fill: var(--color-shadow);
+
+    border: 1px solid var(--color-shadow);
+}
+.unknown{
+    background-color: var(--color-unknow);
+    background-image: url("./assets/types/unknow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    fill: var(--color-unknow);
+
+    border: 1px solid var(--color-unknow);
 }

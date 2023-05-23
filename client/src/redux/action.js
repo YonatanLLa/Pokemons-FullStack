@@ -30,7 +30,6 @@ export const searchTypes = (state) => {
 };
 
 export const searchAttack = (attack) => {
-  console.log(attack);
   return {
     type: ORDER_ATTACK,
     payload: attack,
@@ -87,7 +86,6 @@ export const getTypes = () => {
 
 
 export const setTypes = (types) => {
-  // console.log(types);
   return {
     type: ORDER_TYPE,
     payload: types

@@ -6,7 +6,6 @@
 // const Refresh = () => {
 //     const selector = useSelector(state => state.pokemons)
 //     const dispatch = useDispatch()
-//     console.log(selector);
 //     const handleClick = () => {
 //       dispatch(getPokemons())
 //     }

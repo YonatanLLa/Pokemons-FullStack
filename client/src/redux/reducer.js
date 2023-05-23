@@ -85,7 +85,6 @@ const reactReducer = (state = initialState, action) => {
         ...state,
         pokemons: state.filterId.filter(
           (poke) => {
-            // console.log(poke)
           }
           // poke => poke.id === action.payload
         ),

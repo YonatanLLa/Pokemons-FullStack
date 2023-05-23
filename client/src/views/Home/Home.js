@@ -15,7 +15,6 @@ const Home = () => {
   
 
   // const dispatch = useDispatch()
-  // console.log(pokemons);
   // useEffect(() => {
   // }, [dispatch]);
   return (

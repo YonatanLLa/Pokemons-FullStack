@@ -64,3 +64,10 @@
 .detailSvg path{
 	stroke-width: 1px;
 }
+.cardContinerPower{
+    background-color: #53535383;
+	color: #fff;
+}
+h3{
+	margin: .5rem;
+}

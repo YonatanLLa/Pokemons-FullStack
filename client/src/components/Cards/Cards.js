@@ -40,7 +40,8 @@ const Cards = () => {
 					</div>
 					<div className={styles.cardsContainer}>
 						{countPokemons.length ? (
-							countPokemons.map(({ id, name, image, Types, attack }) => {
+							countPokemons.map(({ id, name, image, types, attack }) =>
+							 {
 								return (
 									<>
 										<Card
@@ -48,7 +49,7 @@ const Cards = () => {
 											id={id}
 											name={name}
 											image={image}
-											type={Types}
+											type={types}
 											attack={attack}
 										/>
 									</>
