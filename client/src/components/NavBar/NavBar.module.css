@@ -11,9 +11,9 @@
     z-index: 2;
     display: grid;
     transition: height .3s ease-in-out;
-    grid-template-columns: 8fr repeat(3, 1fr);
+    grid-template-columns: 3fr repeat(1, 1.4fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
+    /* grid-column-gap: 100px; */
     grid-row-gap: 0px;
     /* margin-top: 1px;  */
     /* padding-top: 1rem; */
@@ -21,16 +21,37 @@
 .inputNav { grid-area: 1 / 1 / 2 / 2; }
 
 .childrenNav{ 
-    grid-area: 1 / 2 / 2 / 5;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: .5rem;
     /* flex-direction: none; */
 }
-li{
-    list-style: none;
+ul{
+    /* display: flex; */
+    /* justify-content: center; */
+    color: #ccc;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
 
+
+}
+a:hover{
+    color: #f39c12 ;
+    /* text-decoration:overline; */
+    border-bottom: 2px solid #f39c12;
+
+}
+
+li{
+    
+    list-style: none;
+    text-decoration: none;
+}
+ul > li > a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
 }

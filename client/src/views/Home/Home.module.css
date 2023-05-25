@@ -7,8 +7,8 @@ body{
 
 .homeContainer {
     display: grid;
-    grid-template-columns: 1fr 9fr 2.5fr;
-    grid-template-rows: 12fr 1fr;
+    grid-template-columns: 1fr 9fr 3fr;
+    grid-template-rows: 14fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 

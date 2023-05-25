@@ -9,13 +9,14 @@ const Card = ({ name, image, type, id }) => {
 			<h1 className={styles.cardTitle} style={{ textAlign: "center" }}>
 				{name}
 			</h1>
-			<Link to={`/detail/${id}`}>
+			<Link style={{border: "none"}} to={`/detail/${id}`}>
 				<img className={styles.cardImg} src={image} alt="" />
 			</Link>
 			<div className={styles.cardDetails}>
-				{type.map((tipo) => {
+				{type.map((tipo, index) => {
 					return (
 						<div
+						key={index}
 							className={` ${styles.cardType}  ${tipo}`}
 							style={{ backgroundColor: "transparent", border: "none" }}
 						>

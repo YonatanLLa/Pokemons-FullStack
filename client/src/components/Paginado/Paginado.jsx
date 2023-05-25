@@ -1,7 +1,10 @@
+import Filter from "../Filter/Filter";
+import Seeker from "../Seeker/Seeker";
 import styles from "./Paginado.module.css";
 // import NotFound from "../NotFound/NotFound";
 
 const Paginado = ({ pokemons, paginado, countPage, currentPage }) => {
+	<Filter paginado={paginado}/>
 	const totalPages = pokemons ? Math.ceil(pokemons.length / countPage) : 0;
 	const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 	const handleClick = (page, event) => {
@@ -23,6 +26,8 @@ const Paginado = ({ pokemons, paginado, countPage, currentPage }) => {
 
 	return (
 		<footer>
+				{/* <Seeker paginado={paginado}/> */}
+
 			<div
 				style={{
 					display: "flex",
@@ -42,6 +47,7 @@ const Paginado = ({ pokemons, paginado, countPage, currentPage }) => {
 								gap: "5px",
 							}}
 						>
+							{/* izquierda */}
 							<button
 								className={`${
 									currentPage !== 1 ? styles.prev : styles.prevNot

@@ -10,6 +10,7 @@
     /* width: 100%; */
     /* height: 100%; */
 }
+
 .videoLanding{
     position: relative;
 }
@@ -17,7 +18,7 @@
     position: absolute;
     top: -130px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 1);
     width: 100%;
     /* height: 110vh; */
     height: 104.71%;
@@ -30,15 +31,16 @@
 
 .buttonLanding{
     font-family: 'Farsan', cursive;
-    color: rgba(33, 33, 33, 0.756);
+    /* color: rgba(33, 33, 33, 0.756); */
     font-weight: 700;
+    color: #2c2c2c;
     border: 1px solid #ffffff;
     font-size: 1.5rem;
     position: absolute;
     border-radius: .5rem;
     cursor: pointer;
     /* border: none; */
-    background: linear-gradient(360deg, rgba(186, 203, 87, 0.797),rgba(255, 128, 0, 0.737));
+    background: linear-gradient(360deg, rgba(186, 203, 87, 0.797),rgb(255, 141, 27));
     /* top: 0; */
     z-index: 300;
     left: 0;
@@ -72,7 +74,8 @@
     border-radius: 1rem;
     font-size: 2rem;
     border: 1px solid #ffffff;
-    background: linear-gradient(180deg, rgba(199, 113, 21, 0.854), rgba(163, 138, 50, 0.589), rgba(228, 225, 225, 0.247));    
+    /* background-color: #3a3a3aa8; */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.795), rgba(163, 105, 50, 0.507), rgba(112, 70, 26, 0.717));    
 }
 .childrenLanding img{
      position: absolute;
@@ -85,6 +88,6 @@
 .subtitleLanding{
     font-family: 'Farsan', cursive;
 
-    color: rgba(33, 33, 33, 0.756);
+    color: rgba(255, 255, 255, 0.756);
     padding: 0 0 0 3rem;    
    }

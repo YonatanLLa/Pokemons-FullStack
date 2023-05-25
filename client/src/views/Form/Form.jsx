@@ -3,6 +3,7 @@ import styles from "./Form.module.css";
 import validation from "./validation";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Form = () => {
 	const [forms, setforms] = useState({
@@ -16,7 +17,6 @@ const Form = () => {
 		image: "",
 		types: [],
 	});
-	console.log(forms, "formsssssssssss....");
 	const [errors, setErrors] = useState({
 		name: "",
 		hp: "",
@@ -47,11 +47,62 @@ const Form = () => {
 	};
 
 	const submitHandler = (event) => {
+		// console.log(Object.keys(errors).length);
+
 		event.preventDefault();
 		axios
 			.post("http://localhost:3001/pokemons", forms)
-			.then((res) => alert(res))
-			.catch((err) => alert(err));
+			.then((response) => {
+				if (response.status === 200) {
+					Swal.fire({
+						background: "#000",
+						title: "Nuevo Pokemon!",
+						text: "Modal with a custom image.",
+						html: `<h3>${forms.name}</h3>
+								<img style="width: 300px;" src="${forms.image}"  alt="" />`,
+						imageWidth: 200,
+						imageHeight: 100,
+						imageAlt: "Custom image",
+					});
+					setforms({
+						name: "",
+						hp: "",
+						attack: "",
+						defense: "",
+						speed: "",
+						height: "",
+						weight: "",
+						image: "",
+						types: [],
+					});
+				}
+			})
+			.catch((err) => {
+				// console.log(err.response.data.error === "Pokemon already exists");
+				if (err.response.data.error === "Pokemon already exists") {
+					Swal.fire({
+						// borderRadius: "2rem",
+						background: "#000",
+						title: "Oops...",
+						text: "Pokemon already exists!",
+						icon: "warning",
+						// showCancelButton: true,
+						confirmButtonColor: "#3085d6",
+						cancelButtonColor: "#d33",
+						confirmButtonText: "ok",
+						// footer: '<a href="">Why do I have this issue?</a>'
+					});
+				} else if (err.response.status === 400) {
+					Swal.fire({
+						// borderRadius: "2rem",
+						background: "#000",
+						icon: "error",
+						title: "Oops...",
+						text: "Datos incompletos",
+						// footer: '<a href="">Why do I have this issue?</a>'
+					});
+				}
+			});
 	};
 	useEffect(() => {
 		setErrors(validation(forms));
@@ -72,8 +123,10 @@ const Form = () => {
 						value={forms.name}
 						onChange={handleInput}
 					/>
-					<span>{errors.name}</span>
-					{/* {errors.name && <p>{errors.name}</p>} */}
+
+					{errors.name && (
+						<span className={styles.colorDebil}>{errors.name}</span>
+					)}
 				</div>
 
 				{/* hp: div2 */}
@@ -86,7 +139,29 @@ const Form = () => {
 						value={forms.hp}
 						onChange={handleInput}
 					/>
-					<span>{errors.hp}</span>
+					{forms.hp <= 30
+						? errors.hp && (
+								<span
+									className={styles.colorDebil}
+								>{`${errors.hp}: ${forms.hp}%`}</span>
+						  )
+						: forms.hp <= 60
+						? errors.hp && (
+								<span
+									className={styles.colorIntermedio}
+								>{`${errors.hp}: ${forms.hp}%`}</span>
+						  )
+						: forms.hp <= 99
+						? errors.hp && (
+								<span
+									className={styles.colorAlta}
+								>{`${errors.hp}: ${forms.hp}%`}</span>
+						  )
+						: errors.hp && (
+								<span
+									className={styles.colorMax}
+								>{`${errors.hp}: ${forms.hp}%`}</span>
+						  )}
 				</div>
 
 				{/* attack: div3 */}
@@ -98,7 +173,29 @@ const Form = () => {
 						value={forms.attack}
 						onChange={handleInput}
 					/>
-					<span>{errors.attack}</span>
+					{forms.attack <= 30
+						? errors.attack && (
+								<span
+									className={styles.colorDebil}
+								>{`${errors.attack}: ${forms.attack}%`}</span>
+						  )
+						: forms.attack <= 60
+						? errors.attack && (
+								<span
+									className={styles.colorIntermedio}
+								>{`${errors.attack}: ${forms.attack}%`}</span>
+						  )
+						: forms.attack <= 99
+						? errors.attack && (
+								<span
+									className={styles.colorAlta}
+								>{`${errors.attack}: ${forms.attack}%`}</span>
+						  )
+						: errors.attack && (
+								<span
+									className={styles.colorMax}
+								>{`${errors.attack}: ${forms.attack}%`}</span>
+						  )}
 				</div>
 
 				{/* defens: div4 */}
@@ -110,7 +207,29 @@ const Form = () => {
 						value={forms.defense}
 						onChange={handleInput}
 					/>
-					<span>{errors.defense}</span>
+					{forms.defense <= 30
+						? errors.defense && (
+								<span
+									className={styles.colorDebil}
+								>{`${errors.defense}: ${forms.defense}%`}</span>
+						  )
+						: forms.defense <= 60
+						? errors.defense && (
+								<span
+									className={styles.colorIntermedio}
+								>{`${errors.defense}: ${forms.defense}%`}</span>
+						  )
+						: forms.defense <= 99
+						? errors.defense && (
+								<span
+									className={styles.colorAlta}
+								>{`${errors.defense}: ${forms.defense}%`}</span>
+						  )
+						: errors.defense && (
+								<span
+									className={styles.colorMax}
+								>{`${errors.defense}: ${forms.defense}%`}</span>
+						  )}
 				</div>
 
 				{/* velocidad: div5 */}
@@ -122,7 +241,29 @@ const Form = () => {
 						value={forms.speed}
 						onChange={handleInput}
 					/>
-					<span>{errors.speed}</span>
+					{forms.speed <= 30
+						? errors.speed && (
+								<span
+									className={styles.colorDebil}
+								>{`${errors.speed}: ${forms.speed}%`}</span>
+						  )
+						: forms.speed <= 60
+						? errors.speed && (
+								<span
+									className={styles.colorIntermedio}
+								>{`${errors.speed}: ${forms.speed}%`}</span>
+						  )
+						: forms.speed <= 99
+						? errors.speed && (
+								<span
+									className={styles.colorAlta}
+								>{`${errors.speed}: ${forms.speed}%`}</span>
+						  )
+						: errors.speed && (
+								<span
+									className={styles.colorMax}
+								>{`${errors.speed}: ${forms.speed}%`}</span>
+						  )}
 				</div>
 
 				{/* Altura: div6 */}
@@ -134,13 +275,23 @@ const Form = () => {
 						value={forms.height}
 						onChange={handleInput}
 					/>
-					<span>{errors.height}</span>
+					{errors.height && (
+						<span className={styles.colorDebil}>{errors.height}</span>
+					)}
 				</div>
 
 				{/* Peso: div7 */}
 				<div className={styles.userBox}>
 					<label htmlFor="">Peso</label>
-					<input type="number" name="weight" onChange={handleInput} />
+					<input
+						type="number"
+						name="weight"
+						value={forms.weight}
+						onChange={handleInput}
+					/>
+					{errors.weight && (
+						<span className={styles.colorDebil}>{errors.weight}</span>
+					)}
 				</div>
 
 				{/* Agregar varios tipos simultao */}
@@ -197,7 +348,9 @@ const Form = () => {
 							})}
 						</div>
 					</div>
-					<span>{errors.types}</span>
+					{errors.types && (
+						<span className={styles.colorDebil}>{errors.types}</span>
+					)}
 				</div>
 				{/* input: div8 */}
 				<div className={styles.userBox}>
@@ -209,6 +362,9 @@ const Form = () => {
 						placeholder="imagen..."
 						onChange={handleInput}
 					/>
+					{errors.image && (
+						<span className={styles.colorDebil}>{errors.image}</span>
+					)}
 				</div>
 				{/* div9 */}
 				<div style={{ position: "absolute", bottom: "2rem", right: "2rem" }}>

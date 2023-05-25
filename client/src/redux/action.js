@@ -9,6 +9,7 @@ import {
   GET_TYPE,
   ORDER_TYPE,
   REFRESH,
+  CREATED,
 
 } from "./type";
 
@@ -83,9 +84,17 @@ export const getTypes = () => {
   }
 }
 
+export const getCreated = (created) => {
+  return{
+    type: CREATED,
+    payload: created
+  }
+}
+
 
 
 export const setTypes = (types) => {
+  console.log(types);
   return {
     type: ORDER_TYPE,
     payload: types

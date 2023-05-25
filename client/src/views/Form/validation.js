@@ -6,17 +6,28 @@ const validation = (forms) => {
   const heightRegex = /^(1|[1-9]?|10)$/;
   const typeRegex =
     /^(normal|fighting|flying|poison|ground|rock|bug|ghost|steel|fire|water|grass|electric|psychic|ice|dragon|dark|fairy|unknown|shadow)$/;
+  const imageRegex = /\.(jpg|jpeg|png|gif|bmp)$/i;
 
 
   // !!!!!!!!!  Todas las validaciones en !!!!
 
   // ?Validacion del Name <--
+      // validacion de IMGE: 
+  // errors.hp = !forms.image
+  //   ?"ingese una Imagen"
+  //   :!imageRegex.test(forms.image)
+  //   ?"Ingrese una imgen valido"
+  //   :"";
+
+  if (!forms.image) {
+    errors.image = "Ingresar imagen"
+  }else if(!imageRegex.test(forms.image)){
+    errors.image = "Ingresar imgen valido"
+  }
 
   if (!forms.name) {
     errors.name = "ingres nombre de tu pokemon..";
-  } else if (!regexMayus.test(forms.name.split("")[0])) {
-    errors.name = "primera letra en mayuscula";
-  } else if (!regex.test(forms.name)) {
+  }  else if (!regex.test(forms.name)) {
     errors.name = "Nombre invaliod";
   }
 
@@ -26,11 +37,11 @@ const validation = (forms) => {
   errors.hp =
     !forms.hp || forms.hp < 1
       ? "Tiene que tener hp"
-      : forms.hp > 1 && forms.hp < 30
+      : forms.hp >= 1 && forms.hp <= 30
       ? "hp debil"
-      : forms.hp > 30 && forms.hp < 60
+      : forms.hp > 30 && forms.hp <= 60
       ? "hp intermedio"
-      : forms.hp > 60 && forms.hp < 99
+      : forms.hp > 60 && forms.hp <= 99
       ? "hp alta"
       : forms.hp > 99
       ? "hp al maximo"
@@ -42,11 +53,11 @@ const validation = (forms) => {
   errors.attack =
     !forms.attack || forms.attack < 1
       ? "Tiene que tener attack"
-      : forms.attack > 1 && forms.attack < 30
+      : forms.attack >= 1 && forms.attack <= 30
       ? "attack debil"
-      : forms.attack > 30 && forms.attack < 60
+      : forms.attack > 30 && forms.attack <= 60
       ? "attack intermedio"
-      : forms.attack > 60 && forms.attack < 99
+      : forms.attack > 60 && forms.attack <= 99
       ? "attack alta"
       : forms.attack > 99
       ? "attack al maximo"
@@ -59,11 +70,11 @@ const validation = (forms) => {
   errors.defense =
     !forms.defense || forms.defense < 1
       ? "Tiene que tener defense"
-      : forms.defense > 1 && forms.defense < 30
+      : forms.defense >= 1 && forms.defense <= 30
       ? "defense debil"
-      : forms.defense > 30 && forms.defense < 60
+      : forms.defense > 30 && forms.defense <= 60
       ? "defense intermedio"
-      : forms.defense > 60 && forms.defense < 99
+      : forms.defense > 60 && forms.defense <= 99
       ? "defense alta"
       : forms.defense > 99
       ? "defense al maximo"
@@ -76,11 +87,11 @@ const validation = (forms) => {
   errors.speed =
     !forms.speed || forms.speed < 1
       ? "Tiene que tener speed"
-      : forms.speed > 1 && forms.speed < 30
+      : forms.speed >= 1 && forms.speed <= 30
       ? "speed debil"
-      : forms.speed > 30 && forms.speed < 60
+      : forms.speed > 30 && forms.speed <= 60
       ? "speed intermedio"
-      : forms.speed > 60 && forms.speed < 99
+      : forms.speed > 60 && forms.speed <= 99
       ? "speed alta"
       : forms.speed > 99
       ? "speed al maximo"
@@ -110,6 +121,9 @@ const validation = (forms) => {
     : forms.types.length < 2
     ? "Tienes que elegir 2"
     :""    
+
+
+
   return errors;
 };
 export default validation;

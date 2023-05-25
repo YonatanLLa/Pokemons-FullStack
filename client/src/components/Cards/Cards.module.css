@@ -1,8 +1,11 @@
 .cardsContinerPokemons{
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
+
 }
 
 .cardsContainer{
@@ -21,6 +24,8 @@
   width: fit-content;
 }
 .cadsPaginado{
+  padding-top: .5rem;
   display: flex;
+  /* margin-bottom: 1rem; */
 
 }

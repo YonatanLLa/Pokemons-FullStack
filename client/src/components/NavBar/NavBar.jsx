@@ -25,6 +25,7 @@ const NavBar = () => {
         </li>
       </ul>
     </div>
+    
     <div className={styles.inputNav}>
         <ul>
           <li>
