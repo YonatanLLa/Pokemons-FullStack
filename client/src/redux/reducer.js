@@ -29,9 +29,7 @@ const reactReducer = (state = initialState, action) => {
 				...state,
 				pokemons: action.payload,
 				filterPokemons: action.payload,
-				// filterAttack: action.payload,
 				filterImg: action.payload,
-				filterId: action.payload,
 				pokeAux: action.payload,
 			};
 		case GET_TYPE: {
@@ -86,15 +84,8 @@ const reactReducer = (state = initialState, action) => {
 				),
 			};
 		}
-		case SET_ID: {
-			return {
-				...state,
-				pokemons: state.filterId.filter(
-					(poke) => {}
-					// poke => poke.id === action.payload
-				),
-			};
-		}
+		
+		
 
 		case ORDER_TYPE: {
 			const filterPokemons = state.filterPokemons;

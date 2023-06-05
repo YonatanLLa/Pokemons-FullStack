@@ -15,7 +15,7 @@ import {
 
 export const getPokemons = () => {
   return async (dispatch) => {
-    const apiPokemons = await axios("http://localhost:3001/pokemons");
+    const apiPokemons = await axios("/pokemons");
     dispatch({
       type: GET_POKEMONS,
       payload: apiPokemons.data,
@@ -39,7 +39,7 @@ export const searchAttack = (attack) => {
 
 export const getPokemonsImg = () => {
   return async (dispatch) => {
-    const apiPokemons = await axios("http://localhost:3001/pokemons");
+    const apiPokemons = await axios("/pokemons");
     dispatch({
       type: SET_IMAGE,
       payload:  apiPokemons.data.image,
@@ -51,8 +51,8 @@ export const getPokemonsImg = () => {
 
 export const seekerPokemons = (name) => {
   return async (dispatch) => {
-    const apiPokemons = name? await axios(`http://localhost:3001/pokemons?name=${name}`)
-    : await axios(`http://localhost:3001/pokemons`);
+    const apiPokemons = name? await axios(`/pokemons?name=${name}`)
+    : await axios(`/pokemons`);
     dispatch({
       type: SET_INPUT,
       payload: apiPokemons.data.name
@@ -64,7 +64,7 @@ export const seekerPokemons = (name) => {
 
 export const seekerPokemonsId = (id) => {
   return async(dispatch) => {
-    const apiPokemons = await axios(`http://localhost:3001/pokemons/${id}`)
+    const apiPokemons = await axios(`/pokemons/${id}`)
     dispatch({
       type: SET_ID,
       payload: apiPokemons.data.id
@@ -76,7 +76,7 @@ export const seekerPokemonsId = (id) => {
 
 export const getTypes = () => {
   return async(dispatch) => {
-    const apiPokemons = await axios(`http://localhost:3001/types`)
+    const apiPokemons = await axios(`/types`)
     dispatch({
       type: GET_TYPE,
       payload: apiPokemons.data

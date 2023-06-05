@@ -6,7 +6,7 @@ const pokeApi = "https://pokeapi.co/api/v2/pokemon";
 const urlType = "https://pokeapi.co/api/v2/type";
 
 const getPokemons = async () => {
-	const api = await axios.get(pokeApi + `?limit=5`);
+	const api = await axios.get(pokeApi + `?limit=10`);
 	const pokeUrl = [];
 	api.data.results.map((r) => {
 		pokeUrl.push(axios.get(r.url).then((response) => response.data));
@@ -22,7 +22,6 @@ const getPokemons = async () => {
 					id,
 					name,
 					image: sprites.other.home.front_default,
-					// imageDetail: sprites.other.home.front_default,
 					types: types.map((t) => t.type.name),
 					hp: stats[0].base_stat,
 					attack: stats[1].base_stat,
@@ -136,11 +135,6 @@ const searchPoke = async (name) => {
 	} // return datasearch ? await datasearch : datoName;
 };
 
-// Logica para el id
-
-// sourse === "API" ? await pokeId(id) : await Pokemon.findByPk(id);
-
-// Revisar no funciona revisar
 const getTypesApi = async () => {
 	const response = await axios.get(urlType);
 	const types = response.data.results;
@@ -177,7 +171,6 @@ module.exports = {
 	createPokeDex,
 	getAllPokes,
 	searchPoke,
-	// getPokemos,
 	clearPokes,
 	updatePokes,
 	getTypesApi,
