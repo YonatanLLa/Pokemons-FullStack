@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import styles from "./App.module.css"
 import axios from "axios"
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://pokemons-fullstack-production.up.railway.app";
 
 function App() {
   const location = useLocation()
