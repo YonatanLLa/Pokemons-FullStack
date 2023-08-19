@@ -25,6 +25,7 @@
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
+    "@types/pg": "^8.10.2",
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
