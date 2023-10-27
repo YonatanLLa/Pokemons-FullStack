@@ -9,16 +9,6 @@ const validation = (forms) => {
   const imageRegex = /\.(jpg|jpeg|png|gif|bmp)$/i;
 
 
-  // !!!!!!!!!  Todas las validaciones en !!!!
-
-  // ?Validacion del Name <--
-      // validacion de IMGE: 
-  // errors.hp = !forms.image
-  //   ?"ingese una Imagen"
-  //   :!imageRegex.test(forms.image)
-  //   ?"Ingrese una imgen valido"
-  //   :"";
-
   if (!forms.image) {
     errors.image = "Ingresar imagen"
   }else if(!imageRegex.test(forms.image)){

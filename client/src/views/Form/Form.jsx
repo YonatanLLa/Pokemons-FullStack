@@ -47,7 +47,6 @@ const Form = () => {
 	};
 
 	const submitHandler = (event) => {
-		// console.log(Object.keys(errors).length);
 
 		event.preventDefault();
 		axios
@@ -78,28 +77,22 @@ const Form = () => {
 				}
 			})
 			.catch((err) => {
-				// console.log(err.response.data.error === "Pokemon already exists");
 				if (err.response.data.error === "Pokemon already exists") {
 					Swal.fire({
-						// borderRadius: "2rem",
 						background: "#000",
 						title: "Oops...",
 						text: "Pokemon already exists!",
 						icon: "warning",
-						// showCancelButton: true,
 						confirmButtonColor: "#3085d6",
 						cancelButtonColor: "#d33",
 						confirmButtonText: "ok",
-						// footer: '<a href="">Why do I have this issue?</a>'
 					});
 				} else if (err.response.status === 400) {
 					Swal.fire({
-						// borderRadius: "2rem",
 						background: "#000",
 						icon: "error",
 						title: "Oops...",
 						text: "Datos incompletos",
-						// footer: '<a href="">Why do I have this issue?</a>'
 					});
 				}
 			});
