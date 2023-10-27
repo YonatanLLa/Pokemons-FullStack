@@ -40,7 +40,6 @@ module.exports = (sequelize) => {
       },
       image: {
         type: DataTypes.STRING,
-        unique: true,
         
       },
       created:{

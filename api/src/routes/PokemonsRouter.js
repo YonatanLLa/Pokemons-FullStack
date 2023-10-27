@@ -9,7 +9,7 @@ const {
 } = require("../handlers/PokeHandler");
 const { validate } = require("../handlers/validate");
 
-pokeRouter.post("/", validate, creatPokeHandler);
+pokeRouter.post("/", creatPokeHandler);
 pokeRouter.get("/", getPokeHandler);
 pokeRouter.get("/:id", getPokeById);
 pokeRouter.delete('/:id', deletePokes)

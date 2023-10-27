@@ -48,14 +48,18 @@ const createPokeDex = async (
 	weight,
 	image
 ) => {
+
+  console.log( name, hp, attack, defense, speed, height, weight, image, types );
+
 	const pokeApi = await getPokemons();
 	const dato = pokeApi.filter((poke) => {
-    console.log(poke.name, name);
 		return poke.name === name;
 	});
 	if (dato.length > 0) {
 		throw new Error( "Pokemon already exists" );
 	}
+
+
 
 	const [pokemon, created] = await Pokemon.findOrCreate({
 		where: { name },
@@ -78,10 +82,12 @@ const createPokeDex = async (
 		},
 	});
 
+
 	pokemon.addTypes(pokeName);
 	return created ? await pokemon : { message: "Pokemon already exists" };
 };
 // se devuel un pokemon encontrado
+
 
 const getAllPokes = async () => {
 	const databasePokes = await Pokemon.findAll({
@@ -93,6 +99,8 @@ const getAllPokes = async () => {
 			},
 		},
 	});
+
+
 
 	const pokesWithTypes = databasePokes.map((poke) => {
 		const types = poke.types.map((type) => type.name);
@@ -121,6 +129,8 @@ const searchApi = async (name) => {
 		created: false,
 	};
 };
+
+// Buscar Pokemon
 const searchPoke = async (name) => {
 	const datasearch = await Pokemon.findOne({
 		where: {

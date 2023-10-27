@@ -13,6 +13,10 @@ const creatPokeHandler = async (req, res) => {
   try {
     const { name, hp, attack, defense, speed, height, weight, image, types } =
       req.body;
+    // if ( !name, !hp, !attack, !defense, !speed, !height, !weight, !image, !types ) {
+    //     throw new Error("Faltan datos")
+    // }
+  // console.log( name, hp, attack, defense, speed, height, weight, image, types );
     const newPokes = await createPokeDex(
       name,
       hp,
@@ -26,6 +30,7 @@ const creatPokeHandler = async (req, res) => {
     );
     res.status(200).json(newPokes);
   } catch (error) {
+    console.log(error);
     res.status(400).json({error: error.message});
   }
 };
