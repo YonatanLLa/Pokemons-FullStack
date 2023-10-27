@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;400;700&family=Creepster&display=swap');
+
+.notFoundPaginado h1{
+    display: block;
+    font-family: 'Anuphan', sans-serif;
+    font-size: 2.1em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #fff;
+    font-weight: 500;
+    /* line-height: 3rem */
+}
+.notFoundPaginado{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding-top: 1rem; */
+    padding-left: 10rem;
+    /* position:relative;
+    top: 0;
+    left: 0;
+    right: 10em;
+    bottom: -5em;
+    margin: auto;
+    width: 700px; */
+}
+.notFoundPaginado svg{
+  transform: scaleX(-1);
+    width: 80px;
+    padding-top: 2rem;
+    padding-right: 1.2rem;
+}

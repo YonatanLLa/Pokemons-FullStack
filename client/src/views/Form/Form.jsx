@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import validation from "./validation";
 import { useSelector } from "react-redux";
-import axios from "axios";
 import Swal from "sweetalert2";
-
+import axios from "axios"
 const Form = () => {
 	const [forms, setforms] = useState({
 		name: "",
@@ -17,6 +16,8 @@ const Form = () => {
 		image: "",
 		types: [],
 	});
+
+	console.log(forms);
 	const [errors, setErrors] = useState({
 		name: "",
 		hp: "",
@@ -74,7 +75,10 @@ const Form = () => {
 						image: "",
 						types: [],
 					});
+
 				}
+				history.push("/home")
+
 			})
 			.catch((err) => {
 				if (err.response.data.error === "Pokemon already exists") {
@@ -88,6 +92,8 @@ const Form = () => {
 						confirmButtonText: "ok",
 					});
 				} else if (err.response.status === 400) {
+
+					console.log(err);
 					Swal.fire({
 						background: "#000",
 						icon: "error",

@@ -3,7 +3,7 @@ const validation = (forms) => {
   let regex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ]+([a-zA-ZáéíóúñÁÉÍÓÚÑ]+)*$/;
   const regexMayus = /[A-Z]/;
   const wightRegex = /^(1|[1-9]?|10)$/;
-  const heightRegex = /^(1|[1-9]?|10)$/;
+  const heightRegex = /^(100|[1-9]?\d|0)$/;
   const typeRegex =
     /^(normal|fighting|flying|poison|ground|rock|bug|ghost|steel|fire|water|grass|electric|psychic|ice|dragon|dark|fairy|unknown|shadow)$/;
   const imageRegex = /\.(jpg|jpeg|png|gif|bmp)$/i;
@@ -92,7 +92,7 @@ const validation = (forms) => {
   //? Validacion del HEIGHT
 
   errors.height = !forms.height
-    ? "Tiene que tener Altura"
+    ? "Tiene que tener Altura (0 - 10m)"
     : !wightRegex.test(forms.height)
     ? "La altura tiene que estar en 0 - 10m"
     : "";
@@ -100,9 +100,9 @@ const validation = (forms) => {
   //? Validacion del HEIGHT
 
   errors.weight = !forms.weight
-    ? "Tiene que tener Peso"
+    ? "Tiene que tener Peso (0 - 100kg)"
     : !heightRegex.test(forms.weight)
-    ? "El peso tiene que estar en 0 - 10kg"
+    ? "El peso tiene que estar en 0 - 100kg"
     : "";
 
     //? Validacion del TYPES:
