@@ -51,7 +51,7 @@ const Form = () => {
 
 		event.preventDefault();
 		axios
-			.post("http://localhost:3001/pokemons", forms)
+			.post("/pokemons", forms)
 			.then((response) => {
 				if (response.status === 200) {
 					Swal.fire({
