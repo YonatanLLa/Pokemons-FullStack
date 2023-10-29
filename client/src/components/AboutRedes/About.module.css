@@ -1,94 +1,109 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    background-color: #2c3e50;
-    border-radius: 10px;
-    margin:  5.2rem 0rem 0rem 0.5rem;
-    /* overflow: hidden; */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  margin: 5.2rem 0rem 0rem 0.5rem;
+  /* overflow: hidden; */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    }
-    @-webkit-keyframes fadeInLeft {
-    0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    }
-    100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-    }
-    }
-    @keyframes fadeInLeft {
-    0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    }
-    100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-    }
-    } 
-  .sidebar li {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-left: 20px;
-    color: #333;
-    font-size: 16px;
-    /* gap: 1rem; */
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color ease;
-  }
-  
-  .sidebar li:hover {
-    background-color: #696969c8;
-    border-radius: 10px;
-  }
-  
-  .sidebar svg {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    fill: #ffffff;
-  }
-  
-  /* Agregado */
-  .sidebar li:hover svg {
-    fill: #f39c12; /* Cambia el color del icono al pasar el mouse sobre el li */
-  }
-  
-  .sidebar li {
-    position: relative;
-  }
-  
-  .sidebar li span {
-    z-index: 1000;
-    position: absolute;
-    top: 18px; 
-    left: calc(100% + 10px);
-    transform: translateY(-50%); 
-    padding: 5px 6px; 
-    background-color: rgba(0, 0, 0, 0.8); /* Agrega transparencia al fondo del span */
-    color: #fff;
-    font-size: 16px;
-    font-weight: normal;
-    border-radius: 5px; /* Agrega bordes redondeados al span */
-    opacity: 0; /* Oculta el span por defecto */
-    transition: opacity 0.2s ease-in-out; /* Agrega una transición de opacidad */
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
-  
-  .sidebar li:hover span {
-    opacity: 1;
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.sidebar li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 20px;
+  color: #333;
+  font-size: 16px;
+  /* gap: 1rem; */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color ease;
+}
+
+.sidebar li:hover {
+  background-color: #696969c8;
+  border-radius: 10px;
+}
+
+.sidebar svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  fill: #ffffff;
+}
+
+/* Agregado */
+.sidebar li:hover svg {
+  fill: #f39c12; /* Cambia el color del icono al pasar el mouse sobre el li */
+}
+
+.sidebar li {
+  position: relative;
+}
+
+.sidebar li span {
+  z-index: 1000;
+  position: absolute;
+  top: 18px;
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+  padding: 5px 6px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Agrega transparencia al fondo del span */
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 5px; /* Agrega bordes redondeados al span */
+  opacity: 0; /* Oculta el span por defecto */
+  transition: opacity 0.2s ease-in-out; /* Agrega una transición de opacidad */
+}
+
+.sidebar li:hover span {
+  opacity: 1;
+}
+
+.linkSidebar {
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkSidebar:hover {
+  text-decoration: none;
+  color: inherit;
+}
