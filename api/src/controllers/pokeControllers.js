@@ -1,42 +1,43 @@
-const { where } = require("sequelize");
 const { Pokemon, Type } = require("../db");
 const axios = require("axios");
 
 const pokeApi = "https://pokeapi.co/api/v2/pokemon";
+
 const urlType = "https://pokeapi.co/api/v2/type";
 
 const getPokemons = async () => {
-	const api = await axios.get(pokeApi + `?limit=100`);
-	const pokeUrl = [];
-	api.data.results.map((r) => {
-		pokeUrl.push(axios.get(r.url).then((response) => response.data));
-	}); //pusheamos las properties de las url para poder manipularlas idividualmente
-
-	const pokeProps = Promise.all(pokeUrl).then(
-		(
-			response //mapeamos las propiedades individuales
-		) =>
-			response.map((p) => {
-				const { id, name, sprites, types, weight, stats, height } = p;
-				return {
-					id,
-					name,
-					image: sprites.other.home.front_default,
-					types: types.map((t) => t.type.name),
-					hp: stats[0].base_stat,
-					attack: stats[1].base_stat,
-					defense: stats[2].base_stat,
-					speed: stats[5].base_stat,
-					weight,
-					height,
-					created: false,
-				};
-			})
-	);
-
-	return await pokeProps; //retornamos el objeto con sus propiedades
+	
+		const requests = [];
+	
+		for (let i = 1; i <= 100; i++) {
+		  requests.push(axios.get(`${pokeApi}/${i}`));
+		}
+	
+		const responses = await Promise.all(requests);
+		const pokemonData = responses.map((response) => {
+		  const { id, name, sprites, types, weight, stats, height } = response.data;
+	
+		  return {
+			  id,
+			  name,
+			  image: sprites.other.home.front_default,
+			  types: types.map((t) => t.type.name),
+			  hp: stats[0].base_stat,
+			  attack: stats[1].base_stat,
+			  defense: stats[2].base_stat,
+			  speed: stats[5].base_stat,
+			  weight,
+			  height,
+			  created: false,
+		  };
+		});
+	
+		return pokemonData
 };
 
+// const getPokemons = async (req, res) => {
+	
+//   };
 const createPokeDex = async (
 	name,
 	hp,

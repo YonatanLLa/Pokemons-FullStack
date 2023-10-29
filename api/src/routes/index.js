@@ -5,7 +5,6 @@ const express = require('express')
 // Ejemplo: const authRouter = require('./auth.js');
 const pokeRouter = require("./PokemonsRouter");
 const typesRouter = require("./TypesRouter")
-
 const routes = Router();
 routes.use(morgan("dev")); //morgan for consola
 routes.use(express.json());
