@@ -32,14 +32,17 @@ const Landing = () => {
               No hay nada más fuerte que una <br /> amistad forjada en batalla...
             </h2>
             <button className={styles.buttonLanding} style={{left: "0"}} onClick={handleClick}>
-              INGRESAR
+              BUSCA TU POKEMON
             </button>
           </div>
-          <img
-            src={pokebola}
-            alt=""
-          className={styles.imgLanding}
-          />
+          <div style={{position: "relative", width: "400px"}}>
+
+            <img
+              src={pokebola}
+              alt=""
+            className={styles.imgLanding}
+            />
+          </div>
             
         </div>
       </div>
