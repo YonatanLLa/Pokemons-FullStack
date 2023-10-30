@@ -9,13 +9,13 @@ const NavBar = () => {
     <div className={styles.childrenNav}>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/home">Inicio</Link>
         </li>
       </ul>
       
       <ul>
         <li>
-          <Link to="/create">Form</Link>
+          <Link to="/create">Crear Prokemon</Link>
         </li>
       </ul>
 
