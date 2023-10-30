@@ -15,9 +15,9 @@ const Landing = () => {
 			<div className={styles.landingImage}>
 				<h1 className={styles.titleLanding}>Pokemon</h1>
 			</div>
-			<div className={styles.videoLanding}>
+			{/* <div className={styles.videoLanding}>
 				<LanVideo />
-			</div>
+			</div> */}
 			<div className={styles.childrenLanding}>
 				<h2 className={styles.subtitleLanding}>
 					No hay nada más fuerte que una <br /> amistad forjada en batalla...
