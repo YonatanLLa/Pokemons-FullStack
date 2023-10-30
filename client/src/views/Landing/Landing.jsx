@@ -1,17 +1,17 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import styles from "./Landing.module.css";
 import pokebola from "../../assets/pokebola.png";
-import { getPokemons } from "../../redux/action";
-import { useDispatch } from "react-redux";
+// import { getPokemons } from "../../redux/action";
+// import { useDispatch } from "react-redux";
 
 const Landing = () => {
-  const dispatch = useDispatch();
+//   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(getPokemons());
-  }, [dispatch]);
+//   useEffect(() => {
+//     dispatch(getPokemons());
+//   }, [dispatch]);
 
   const handleClick = () => {
     navigate("/home");
