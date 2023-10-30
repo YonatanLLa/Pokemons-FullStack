@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useNavigate } from "react-router";
 import styles from "./Landing.module.css";
 import pokebola from "../../assets/pokebola.png";
@@ -17,7 +17,7 @@ const Landing = () => {
 	const handleClick = () => {
 		navigate("/home");
 	};
-	
+
 	return (
 		<div className={styles.containerLanding}>
 			<div className={styles.landingImage}>
