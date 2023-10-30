@@ -50,7 +50,6 @@ const createPokeDex = async (
 	image
 ) => {
 
-  console.log( name, hp, attack, defense, speed, height, weight, image, types );
 
 	const pokeApi = await getPokemons();
 	const dato = pokeApi.filter((poke) => {
@@ -102,11 +101,12 @@ const getAllPokes = async () => {
 	});
 
 
-
+	
 	const pokesWithTypes = databasePokes.map((poke) => {
 		const types = poke.types.map((type) => type.name);
 		return { ...poke.toJSON(), types };
 	});
+
 
 	const apiPokes = await getPokemons();
 	return [...pokesWithTypes, ...apiPokes];
