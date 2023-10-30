@@ -9,7 +9,7 @@ const getPokemons = async () => {
 	
 		const requests = [];
 	
-		for (let i = 1; i <= 100; i++) {
+		for (let i = 1; i <= 50; i++) {
 		  requests.push(axios.get(`${pokeApi}/${i}`));
 		}
 	
