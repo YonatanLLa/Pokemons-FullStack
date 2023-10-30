@@ -24,19 +24,24 @@ const Landing = () => {
       </div>
 
       <div className={styles.childrenLanding}>
-        <h2 className={styles.subtitleLanding}>
-          No hay nada más fuerte que una <br /> amistad forjada en batalla...
-        </h2>
-      </div>
-      <img
-        src={pokebola}
-        alt=""
-        style={{ position: "absolute", left: "30rem", top: "12rem" }}
-      />
-      <div className={styles.buttonDivLanding}>
-        <button className={styles.buttonLanding} onClick={handleClick}>
-          INGRESAR
-        </button>
+        
+        <div className={styles.imgBottomLanding}>
+          <div style={{display: "flex", flexDirection: "column"}} className={styles.containerPhone}>
+
+            <h2 className={styles.subtitleLanding}>
+              No hay nada más fuerte que una <br /> amistad forjada en batalla...
+            </h2>
+            <button className={styles.buttonLanding} style={{left: "0"}} onClick={handleClick}>
+              INGRESAR
+            </button>
+          </div>
+          <img
+            src={pokebola}
+            alt=""
+          className={styles.imgLanding}
+          />
+            
+        </div>
       </div>
     </div>
   );
