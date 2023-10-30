@@ -6,7 +6,10 @@ import styles from "./Home.module.css";
 import Silebar from "../../components/AboutRedes/Silebar";
 import Cards from "../../components/Cards/Cards";
 
+
 const Home = () => {
+  
+
   return (
     <div className={styles.homeContainer}>
       <div className={styles.homeNavD1}>

@@ -3,17 +3,15 @@ import Card from "../Card/Card";
 import styles from "./Cards.module.css";
 import { useSelector } from "react-redux";
 import Paginado from "../Paginado/Paginado";
-import { getPokemons } from "../../redux/action";
-import { useDispatch } from "react-redux";
-// import NotFound from "../NotFound/NotFound";
+// import { getPokemons } from "../../redux/action";
+// import { useDispatch } from "react-redux";
 import Loading from "../Loanding/Loading";
-// import Seeker from "../Seeker/Seeker.jsx"
 const Cards = () => {
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 	const pokemons = useSelector((state) => state.pokemons);
-	useEffect(() => {
-		dispatch(getPokemons());
-	}, [dispatch]);
+	// useEffect(() => {
+	// 	dispatch(getPokemons());
+	// }, [dispatch]);
 
 	const [currentPage, setCurrentPage] = useState(1);
 	const countPage = 12;
@@ -30,7 +28,6 @@ const Cards = () => {
 	return (
 		<div className={styles.cardsContinerPokemons}>
 			{
-				// countPokemons.lenght?
 				<>
 					<div className={styles.cadsPaginado}>
 							<Paginado
