@@ -17,7 +17,7 @@ server.use(morgan("dev"));
 server.use((req, res, next) => {
   res.header(
 		"Access-Control-Allow-Origin",
-		"http://localhost:5173"
+		"https://pokemons-full-stack.vercel.app"
 	); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
