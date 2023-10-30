@@ -41,16 +41,16 @@ const Cards = () => {
 						{countPokemons.length ? (
 							countPokemons.map(({ id, name, image, types, attack }, index) => {
 								return (
-									<>
+									<div  key={index} >
 										<Card
-											key={index}
+											
 											id={id}
 											name={name}
 											image={image}
 											type={types}
 											attack={attack}
 										/>
-									</>
+									</div>
 								);
 							})
 						) : (

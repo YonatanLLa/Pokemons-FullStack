@@ -74,9 +74,9 @@ const Paginado = ({ pokemons, paginado, countPage, currentPage }) => {
 
 							<div className={styles.buttonPaginado}>
 								{pageNumbers &&
-									pageNumbers.map((page) => {
+									pageNumbers.map((page, index) => {
 										return (
-											<>
+											<div key={index}>
 												<div
 													style={{
 														display: "flex",
@@ -96,7 +96,7 @@ const Paginado = ({ pokemons, paginado, countPage, currentPage }) => {
 														{page}
 													</button>
 												</div>
-											</>
+											</div>
 										);
 									})}
 							</div>

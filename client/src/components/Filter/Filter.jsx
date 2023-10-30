@@ -63,11 +63,11 @@ const Filter = (paginado) => {
 						{types &&
 							types.map((types, index) => {
 								return (
-									<>
+									// <div key={types}>
 										<option key={index} value={types.name}>
 											{types.name}
 										</option>
-									</>
+									// </div>
 								);
 							})}
 					</>
