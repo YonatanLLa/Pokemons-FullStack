@@ -16,8 +16,6 @@
 .buttonPrev {
 	border: none;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-
-
 }
 .buttonPrev:hover{
     background-color: #696969c8;
@@ -38,6 +36,7 @@
 	cursor: pointer;
 	width: 30px;
 	height: 40px;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 .buttonCount:hover{
     background-color: #696969c8;
@@ -47,3 +46,7 @@
 .colorCurrente{
     background-color: #696969c8;
     color: #f39c12;}
+
+	@media only screen and (max-width: 600px) {
+		
+	  }

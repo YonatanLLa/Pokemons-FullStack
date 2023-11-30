@@ -6,6 +6,8 @@ import Paginado from "../Paginado/Paginado";
 import { getPokemons } from "../../redux/action";
 import { useDispatch } from "react-redux";
 import Loading from "../Loanding/Loading";
+
+
 const Cards = () => {
 	const dispatch = useDispatch();
 	const pokemons = useSelector((state) => state.pokemons);

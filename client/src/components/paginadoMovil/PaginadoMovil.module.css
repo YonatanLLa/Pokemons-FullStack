@@ -1,0 +1,27 @@
+
+.pagination {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .buttonPrev,
+  .buttonNext {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buttonPrev.disabled,
+  .buttonNext.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .currentPage {
+    font-size: 18px;
+    color: #333;
+  }

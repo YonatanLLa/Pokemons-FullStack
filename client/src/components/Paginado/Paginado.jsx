@@ -1,5 +1,4 @@
 import Filter from "../Filter/Filter";
-import Seeker from "../Seeker/Seeker";
 import styles from "./Paginado.module.css";
 // import NotFound from "../NotFound/NotFound";
 

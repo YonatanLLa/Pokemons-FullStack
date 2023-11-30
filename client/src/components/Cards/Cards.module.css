@@ -29,3 +29,10 @@
     /* margin-bottom: 1rem; */
   
   }
+
+  @media only screen and (max-width: 600px) {
+    .cardsContainer{
+      
+      padding: .5rem 1rem;
+    }
+  }

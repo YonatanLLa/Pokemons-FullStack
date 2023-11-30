@@ -26,7 +26,7 @@ const Filter = (paginado) => {
 		const selectedOrder = event.target.value;
 		setOrder(selectedOrder);
 		dispatch(searchTypes(selectedOrder));
-		// paginado(paginado)
+		paginado(paginado)
 	};
 
 	const handleAttack = (event) => {

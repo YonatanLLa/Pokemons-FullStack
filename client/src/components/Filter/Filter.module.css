@@ -110,3 +110,9 @@ select::-ms-expand {
 .select:hover::after {
   color: #f39c12;
 }
+
+@media only screen and (max-width: 600px) {
+  .filterContainer {
+    display: none;
+  }
+}
