@@ -1,0 +1,14 @@
+.movil{
+    display: none;
+}
+.ordenador{
+    display: block;
+}
+@media only screen and (max-width: 600px) {
+    .movil{
+        display: block;
+    }
+    .ordenador{
+        display: none;
+    }
+}

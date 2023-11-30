@@ -6,7 +6,7 @@
   /* border-radius: 10px; */
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 1000;
   display: grid;
   transition: height 0.3s ease-in-out;
   grid-template-columns: 3fr repeat(1, 1.4fr);

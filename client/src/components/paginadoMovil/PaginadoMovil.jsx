@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PaginadoMovil.module.css";
 
 const PaginadoMovil = ({ paginado, countPage, currentPage }) => {
-  const totalPages = 10; // Define el número total de páginas según tu lógica
+  const totalPages = 9; // Define el número total de páginas según tu lógica
 
   const handleClick = (page, event) => {
     event.preventDefault();

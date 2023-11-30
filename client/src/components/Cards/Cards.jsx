@@ -6,7 +6,7 @@ import Paginado from "../Paginado/Paginado";
 import { getPokemons } from "../../redux/action";
 import { useDispatch } from "react-redux";
 import Loading from "../Loanding/Loading";
-
+import PaginadoMovil from "../paginadoMovil/PaginadoMovil";
 
 const Cards = () => {
 	const dispatch = useDispatch();
@@ -31,6 +31,7 @@ const Cards = () => {
 		<div className={styles.cardsContinerPokemons}>
 			{
 				<>
+				
 					<div className={styles.cadsPaginado}>
 							<Paginado
 								currentPage={currentPage}
@@ -81,13 +82,21 @@ const Cards = () => {
 						)}
 					</div>
 
-					<div>
+					<div className={styles.cadsPaginado}>
 							<Paginado
 								currentPage={currentPage}
 								pokemons={pokemons}
 								paginado={paginados}
 								countPage={countPage}
 							/>
+					</div>
+					<div className={styles.cardsMovile}>
+						<PaginadoMovil
+									currentPage={currentPage}
+									pokemons={pokemons}
+									paginado={paginados}
+									countPage={countPage}
+								/>
 					</div>
 				</>
 				// : <NotFound/>

@@ -7,5 +7,5 @@ export {
     Detail,
     Form,
     Home,
-    Landing
+    Landing,
 }
