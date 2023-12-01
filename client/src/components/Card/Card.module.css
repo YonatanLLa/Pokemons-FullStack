@@ -55,9 +55,16 @@
 }
 
 /* loading */
-
+.loadingCard{
+  width: 260px;
+  height: 360px;
+}
 @media only screen and (max-width: 600px) {
   .cardImg {
     width: 160px;
+  }
+  .loadingCard{
+    width: 160px;
+    height: 260px;
   }
 }

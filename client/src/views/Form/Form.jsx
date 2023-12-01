@@ -366,7 +366,7 @@ const Form = () => {
 					)}
 				</div>
 				{/* div9 */}
-				<div style={{ position: "absolute", bottom: "2rem", right: "2rem" }}>
+				<div className={styles.bottomForm} >
 					<button type="submit" className={styles.button}>
 						Crea tu pokemon
 					</button>

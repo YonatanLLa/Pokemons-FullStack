@@ -21,7 +21,7 @@ const Card = ({ name, image, type, id }) => {
 			</h1>
 			<Link style={{ border: "none" }} to={`/detail/${id}`}>
 				<div className={styles.loadingContainer}>
-					{!imageLoaded && <div style={{width: "260px", height: "360px"}}><Loading/></div>}
+					{!imageLoaded && <div className={styles.loadingCard}><Loading/></div>}
 						<img
 							className={`${styles.cardImg} ${imageLoaded ? styles.showImage : ""}`}
 							src={image}
