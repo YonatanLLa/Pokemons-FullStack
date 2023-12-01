@@ -64,9 +64,10 @@ ul > li > a {
   .navContainer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-around;
     /* padding: .1rem; */
-    padding: .5rem 0;
+    /* margin: .5rem; */
   }
   .menuToggle{
     display: block;
@@ -77,7 +78,7 @@ ul > li > a {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 53px;
     left: 0;
     background-color: #333;
   }
@@ -91,7 +92,7 @@ ul > li > a {
     padding: 0;
   }
   .menuToggle svg {
-    width: 50px;
+    width: 30px;
     fill: #ccc;
     
   }
