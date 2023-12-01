@@ -11,12 +11,12 @@ const sequelize = new Sequelize(
       logging: false, // set to console.log to see the raw SQL queries
       native: false, // lets Sequelize know we can use pg-native for ~30% more speed
       dialectOptions: {
-         ssl: false,
+         // ssl: false,
 
-         // ssl: {
-         //    require: true,
-         //    rejectUnauthorized: false,  // Puedes ajustar esto según tus necesidades de seguridad
-         // }
+         ssl: {
+            require: true,
+            rejectUnauthorized: false,  // Puedes ajustar esto según tus necesidades de seguridad
+         }
       }
    }
 );
