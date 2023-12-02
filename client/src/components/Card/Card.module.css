@@ -4,7 +4,6 @@
   background-color: rgba(14, 14, 14, 0.781);
   padding: 0;
   transition: border 0.3s ease, box-shadow 0.3s ease;
-
 }
 .cardContainer:hover {
   border: 1px solid rgba(142, 142, 142, 0.868);
@@ -55,7 +54,7 @@
 }
 
 /* loading */
-.loadingCard{
+.loadingCard {
   width: 260px;
   height: 360px;
 }
@@ -63,8 +62,15 @@
   .cardImg {
     width: 160px;
   }
-  .loadingCard{
+  .loadingCard {
     width: 160px;
     height: 260px;
+  }
+  .cardTitle,
+  .cardId {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    color: #454545cf;
   }
 }

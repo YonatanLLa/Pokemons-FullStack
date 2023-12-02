@@ -300,22 +300,16 @@ const Form = () => {
 							<label htmlFor="">Tipos: </label>
 							<select
 								onChange={handleSelect}
-								style={{
-									height: "45px",
-									width: "100px",
-									borderRadius: "5px",
-									marginLeft: "10px",
-									marginRight: "3rem",
-								}}
+								
 								className={
-									forms.types.length >= 2 ? styles.selectDisable : null
+									`${forms.types.length >= 2 ? styles.selectDisable : null} ${styles.selectForm}`
 								}
 							>
 								{types &&
 									types.map((type, index) => {
 										return (
 											<>
-												<option key={index} value={type.name}>
+												<option className={styles.optionForm} key={index} value={type.name}>
 													{type.name}
 												</option>
 											</>

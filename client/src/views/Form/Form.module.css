@@ -128,6 +128,12 @@ input[type="range"]:active::-webkit-slider-thumb {
   /* flex-direction: column; */
   gap: 20px;
 }
+.tipesForm > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .selectDisable {
   pointer-events: none;
 }
@@ -147,6 +153,17 @@ input[type="range"]:active::-webkit-slider-thumb {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+}
+.selectForm {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 2rem;
+
+}
+.optionForm {
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -173,7 +190,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   .bottomForm {
     position: absolute;
     bottom: -9rem;
-    right: .2rem;
+    right: 0.2rem;
     /* margin: 1rem; */
+  }
+  .selectForm {
+    margin-right: 1rem;
   }
 }

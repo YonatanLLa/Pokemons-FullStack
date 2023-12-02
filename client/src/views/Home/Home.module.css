@@ -50,10 +50,15 @@ grid-row-gap: 0px;
 .div2 { grid-area: 1 / 2 / 2 / 3; }
 .div3 { grid-area: 1 / 3 / 2 / 4; }
 .div4 { grid-area: 2 / 1 / 3 / 4; } */
-
+.homeFilterMovil{
+  display: none;
+}
 @media only screen and (max-width: 600px) {
   .homeContainer {
     display: block;
   }
-  
+  .homeFilterMovil{
+    display: block;
+    padding-top: 4.5rem;
+  }
 }

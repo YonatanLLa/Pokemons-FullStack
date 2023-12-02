@@ -36,12 +36,13 @@
   @media only screen and (max-width: 600px) {
     .cardsMovile {
       display: block;
+      margin: 1rem;
     }
     .cadsPaginado{
       display: none;
     }
     .cardsContinerPokemons{
-      padding-top: 5rem;
+      padding-top: 1rem;
     }
     .cardsContainer{
       padding: 0;
