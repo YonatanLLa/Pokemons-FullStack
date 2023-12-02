@@ -90,8 +90,8 @@ const FilterMovil = (paginado) => {
           {/* <label htmlFor="">Filtrado Por: </label> */}
           <select name="" id="" value={created} onChange={handleCreated}>
             {/* <option value="todos">todo</option> */}
-            <option value="created">pokemons creados</option>
-            <option value="api">Pokemons</option>
+            <option value="created">pokemones creados</option>
+            <option value="api">Pokemones</option>
           </select>
         </div>
         <div className={styles.select}>

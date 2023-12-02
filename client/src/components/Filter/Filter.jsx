@@ -92,8 +92,8 @@ const Filter = (paginado) => {
 				{/* <label htmlFor="">Filtrado Por: </label> */}
 				<select name="" id="" value={attack} onChange={handleAttack}>
 					{/* <option value="todos">todo</option> */}
-					<option value="Asendente">Attack - </option>
-					<option value="Desendente">Attack + </option>
+					<option value="Asendente">Ataque - </option>
+					<option value="Desendente">Atque + </option>
 				</select>
 			</div>
 
@@ -101,8 +101,8 @@ const Filter = (paginado) => {
 				{/* <label htmlFor="">Filtrado Por: </label> */}
 				<select name="" id="" value={created} onChange={handleCreated}>
 					{/* <option value="todos">todo</option> */}
-					<option value="created">pokemons creados</option>
-					<option value="api">pokemons</option>
+					<option value="created">pokemones creados</option>
+					<option value="api">pokemones</option>
 				</select>
 			</div>
 
