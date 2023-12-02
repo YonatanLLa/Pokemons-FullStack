@@ -52,7 +52,7 @@ const Detail = () => {
 
 			<div clascardContinerPowersName={styles.containerDetail}>
 				<div className={styles.descriptionDetail}>
-					<h3 className={styles.avility}>Caracteristicas</h3>
+					<h3 className={styles.avility}>Características</h3>
 					<div
 						className={`${styles.cardContinerPower}  ${types[0]} ${styles.prueba}`}
 				

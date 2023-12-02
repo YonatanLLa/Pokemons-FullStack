@@ -58,7 +58,7 @@ const Filter = (paginado) => {
 
 				<select name="" id="" onChange={handleTypes} value={type}>
 					<>
-						<option value="todos">Selection of Type</option>
+						<option value="todos">Tipos</option>
 						<option value="todos">todo</option>
 						{types &&
 							types.map((types, index) => {

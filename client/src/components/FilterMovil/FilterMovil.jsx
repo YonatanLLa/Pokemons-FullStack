@@ -54,7 +54,7 @@ const FilterMovil = (paginado) => {
         <div className={`${styles.select} select`}>
           <select name="" id="" onChange={handleTypes} value={type}>
             <>
-              <option value="todos">Selection of Type</option>
+              <option value="todos">Tipos</option>
               <option value="todos">todo</option>
               {types &&
                 types.map((types, index) => {
@@ -91,15 +91,15 @@ const FilterMovil = (paginado) => {
           <select name="" id="" value={created} onChange={handleCreated}>
             {/* <option value="todos">todo</option> */}
             <option value="created">pokemons creados</option>
-            <option value="api">pokemons</option>
+            <option value="api">Pokemons</option>
           </select>
         </div>
         <div className={styles.select}>
           {/* <label htmlFor="">Filtrado Por: </label> */}
           <select name="" id="" value={attack} onChange={handleAttack}>
             {/* <option value="todos">todo</option> */}
-            <option value="Asendente">Attack - </option>
-            <option value="Desendente">Attack + </option>
+            <option value="Asendente">Ataque - </option>
+            <option value="Desendente">Ataque + </option>
           </select>
         </div>
       </div>
