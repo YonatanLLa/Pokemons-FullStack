@@ -52,15 +52,15 @@ const Detail = () => {
 
 			<div clascardContinerPowersName={styles.containerDetail}>
 				<div className={styles.descriptionDetail}>
-					<h3 className={styles.avility}>Altura y Peso</h3>
+					<h3 className={styles.avility}>Caracteristicas</h3>
 					<div
 						className={`${styles.cardContinerPower}  ${types[0]} ${styles.prueba}`}
 				
 					>
-						<h3 style={{fontWeight: "300"}}>weight: {weight}kg</h3>
-						<h3 style={{fontWeight: "300"}}>height: {height}m</h3>
+						<h3 style={{fontWeight: "300"}}>Peso: {weight}kg</h3>
+						<h3 style={{fontWeight: "300"}}>Altura: {height}m</h3>
 					</div>
-					<h3 className={styles.avility}>Avilidades</h3>
+					<h3 className={styles.avility}>Habilidades</h3>
 					<div
 						className={`${styles.cardContinerPower} ${types[0]} ${styles.containerPower}`}
 						
@@ -73,7 +73,7 @@ const Detail = () => {
 								justifyContent: "center",
 							}}
 						>
-							<h3 style={{fontWeight: "300"}}>Hp: </h3>
+							<h3 style={{fontWeight: "300"}}>Vida: </h3>
 							<ProgressBar progress={hpPercentage} />
 							<span>{hp}%</span>
 						</div>
@@ -85,7 +85,7 @@ const Detail = () => {
 								justifyContent: "center",
 							}}
 						>
-							<h3 style={{fontWeight: "300"}}>Attack: </h3>
+							<h3 style={{fontWeight: "300"}}>Ataque: </h3>
 							<ProgressBar progress={attackPercentage} />
 							<span style={{ marginRight: "32px" }}>{attack}%</span>
 						</div>
@@ -98,7 +98,7 @@ const Detail = () => {
 								justifyContent: "center",
 							}}
 						>
-							<h3 style={{fontWeight: "300"}}>Defense: </h3>
+							<h3 style={{fontWeight: "300"}}>Defensa: </h3>
 							<ProgressBar progress={defensePercentage} />
 							<span style={{ marginRight: "45px" }}>{defense}%</span>
 						</div>
@@ -110,7 +110,7 @@ const Detail = () => {
 								justifyContent: "center",
 							}}
 						>
-							<h3 style={{fontWeight: "300"}}>Speed: </h3>
+							<h3 style={{fontWeight: "300"}}>Velocidad: </h3>
 							<ProgressBar progress={speedPercentage} />
 							<span style={{ marginRight: "28px" }}>{speed}%</span>
 						</div>
